@@ -1,0 +1,59 @@
+@import '../config/variables';
+@import '../mixins/font-size';
+@import '../mixins/line-height';
+@import '../mixins/transition';
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    margin: $spacer 0;
+    text-align: left;
+    width: 100%;
+
+    code {
+        display: inline-block;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    tbody {
+        tr {
+            @include transition(background);
+
+            &:nth-child(odd) {
+                background: rgba($color-primary-light, $disabled-opacity / 3);
+            }
+
+            &:hover {
+                background: rgba($color-primary-light, $disabled-opacity);
+            }
+        }
+    }
+
+    td {
+        padding: $spacer / 2;
+    }
+
+    th {
+        @include font-size(0.8);
+        @include line-height(0.8);
+
+        color: $color-secondary;
+        font-weight: $font-weight-base;
+        padding: $spacer / 2;
+        text-transform: uppercase;
+    }
+
+    thead {
+        tr {
+            background: none;
+        }
+    }
+}

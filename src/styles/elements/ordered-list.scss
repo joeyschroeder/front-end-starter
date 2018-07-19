@@ -1,0 +1,31 @@
+@import '../config/variables';
+
+ol {
+    list-style: none;
+    margin-bottom: $spacer;
+    margin-top: $spacer;
+    padding-left: $spacer * 2;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    li {
+        counter-increment: step-counter;
+        position: relative;
+
+        &::before {
+            color: $color-primary;
+            content: counter(step-counter) '.';
+            font-weight: $font-weight-bold;
+            position: absolute;
+            text-align: right;
+            left: -$spacer * 1.5;
+            width: $spacer;
+        }
+    }
+}

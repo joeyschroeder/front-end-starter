@@ -1,0 +1,8 @@
+@import '../../styles/config/variables';
+
+.root {
+    padding: $spacer;
+    border-right: $border-width solid $color-border;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}

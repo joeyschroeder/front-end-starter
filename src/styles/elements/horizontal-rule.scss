@@ -1,0 +1,16 @@
+@import '../config/variables';
+
+hr {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: $border-width solid $color-border;
+    display: block;
+    height: $border-width;
+    margin: $spacer auto;
+    padding: 0;
+
+    @media screen and (min-width: $width-mobile) {
+        margin: $spacer * 2 auto;
+    }
+}

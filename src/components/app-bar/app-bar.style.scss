@@ -1,0 +1,6 @@
+@import '../../styles/config/variables';
+
+.root {
+    background: $color-white;
+    border-bottom: $border-width solid $color-border;
+}

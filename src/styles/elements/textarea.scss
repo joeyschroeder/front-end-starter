@@ -1,0 +1,32 @@
+@import '../config/variables';
+@import '../mixins/font-size';
+@import '../mixins/line-height';
+@import '../mixins/transition';
+
+textarea {
+    @include transition(border-color);
+    @include font-size(1);
+    @include line-height(1.4);
+
+    border: $border-width solid $color-border;
+    box-sizing: border-box;
+    color: $color-secondary-dark;
+    display: block;
+    font-family: $font-family-sans-serif;
+    padding: $spacer;
+    position: relative;
+    resize: vertical;
+    width: 100%;
+
+    &:disabled {
+        opacity: $disabled-opacity;
+    }
+
+    &:focus {
+        border-color: $color-primary;
+    }
+
+    &::placeholder {
+        color: $color-secondary;
+    }
+}

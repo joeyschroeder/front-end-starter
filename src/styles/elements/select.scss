@@ -1,0 +1,20 @@
+@import '../config/variables';
+
+select {
+    background: transparent;
+    border: none;
+    color: $color-secondary-dark;
+    display: block;
+    font-family: $font-family-sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &::placeholder {
+        color: $color-secondary;
+    }
+
+    option {
+        width: 100%;
+    }
+}

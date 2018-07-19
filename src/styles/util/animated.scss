@@ -1,0 +1,8 @@
+@import '../config/variables';
+
+$selector: animated;
+
+.#{$selector} {
+    animation-duration: $duration-base * 2;
+    animation-timing-function: $ease-default;
+}

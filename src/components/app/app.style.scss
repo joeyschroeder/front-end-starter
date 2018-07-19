@@ -1,0 +1,19 @@
+@import '../../styles/config/variables';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    @media print {
+        display: block;
+        height: auto;
+        overflow: visible;
+        position: relative;
+    }
+}

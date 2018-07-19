@@ -1,0 +1,26 @@
+@import '../../styles/config/variables';
+@import '../../styles/mixins/font-size';
+@import '../../styles/mixins/line-height';
+
+.root {
+    h1 {
+        @include font-size(5);
+        @include line-height(3.8);
+
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+
+        strong {
+            font-weight: $font-weight-heavy;
+        }
+
+        @media screen and (max-width: $width-mobile) {
+            @include font-size(4);
+            @include line-height(3);
+        }
+    }
+}
+
+.primary {
+    max-width: $width-mobile;
+}

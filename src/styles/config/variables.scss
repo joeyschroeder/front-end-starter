@@ -1,0 +1,79 @@
+/* colors
+**********************************************************/
+// base
+$color-black: #000;
+$color-blackType: #3a3a3a;
+$color-danger: #fe5b5c;
+$color-grey: lighten($color-blackType, 30%);
+$color-success: #a0cb4d;
+$color-warning: #fdb634;
+$color-white: #fff;
+
+// social
+$color-facebook: #3b5998;
+$color-google-plus: #f44336;
+$color-pinterest: #c92228;
+$color-twitter: #6cadde;
+
+// branding
+$color-primary: #326bab;
+$color-primary-light: lighten($color-primary, 27%);
+$color-primary-dark: darken($color-primary, 23%);
+$color-secondary: #969899;
+$color-secondary-light: lighten($color-secondary, 27%);
+$color-secondary-dark: darken($color-secondary, 30%);
+
+// component specific
+$color-background: lighten($color-secondary, 37%);
+$color-border: rgba($color-black, 0.1);
+$disabled-opacity: 0.4;
+
+/* typography
+**********************************************************/
+// font families
+$font-family-mono: Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-family-sans-serif: 'Proxima Nova', arial, sans-serif;
+$font-family-secondary: arial, sans-serif;
+
+// font sizes
+$font-size-base: 1;
+$line-height-base: 1.4;
+
+// font weights
+$font-weight-heavy: 800;
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-base: 400;
+$font-weight-light: 200;
+
+/* device widths
+**********************************************************/
+$widescreen: 56.25%;
+$width-mobile: 576px;
+$width-mobile-small: 0;
+$width-tablet: 768px;
+$width-desktop: 992px;
+$width-max: 1200px;
+
+/* spacing
+**********************************************************/
+$spacer: 1rem;
+
+/* scaffolding
+**********************************************************/
+$border-radius: $spacer / 5;
+$border-width: 1px;
+$border-width-large: $border-width * 6;
+
+/* animations
+**********************************************************/
+// duration
+$duration-base: 0.2s;
+
+// easing
+$ease-default: ease;
+
+html {
+    // adjust this value to control entire app REM size
+    // font-size: 63.75%;
+}

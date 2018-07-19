@@ -1,0 +1,7 @@
+@import '../config/variables';
+
+@mixin transition($transitionProperty, $transitionDuration: $duration-base) {
+    transition-duration: $transitionDuration;
+    transition-property: $transitionProperty;
+    transition-timing-function: $ease-default;
+}
