@@ -1,4 +1,5 @@
 export const ROUTES = {
     SPLASH: '/',
-    REDUX: '/redux'
+    REDUX: '/redux',
+    HOT_RELOAD: '/hot-reload'
 };

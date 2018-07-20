@@ -5,6 +5,8 @@ const DEFAULT_STATE = { testProp: 0 };
 const UPDATE = 'test/UPDATE';
 const RESET = 'test/RESET';
 
+export const selectValue = state => state.testState.testProp;
+
 export default handleActions(
     {
         [RESET]: state => Object.assign({}, state, {  testProp: DEFAULT_STATE.testProp }),
