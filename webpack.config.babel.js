@@ -62,7 +62,7 @@ const productionConfig = merge([
 
 const developmentConfig = merge([
     commonConfig,
-    devServer({ host: 'localhost', port: 1337 }),
+    devServer({ host: 'localhost', port: 9090 }),
     getSourcemaps({ type: 'cheap-module-eval-source-map' }),
     loadFonts({ options: { name: '[name].[ext]' } }),
     loadStyles({})
