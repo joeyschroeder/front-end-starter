@@ -1,3 +1,3 @@
 export const getSourcemaps = ({ type }) => {
-    return { devtool: type };
+  return { devtool: type };
 };

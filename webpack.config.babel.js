@@ -11,66 +11,63 @@ import merge from 'webpack-merge';
 import path from 'path';
 
 const ROOT_PATHS = {
-    dist: path.join(__dirname, 'dist'),
-    src: path.join(__dirname, 'src')
+  dist: path.join(__dirname, 'dist'),
+  src: path.join(__dirname, 'src')
 };
 
 const entryConfig = {
-    entry: path.join(ROOT_PATHS.src, 'index.js')
+  entry: path.join(ROOT_PATHS.src, 'index.js')
 };
 
 const outputConfig = {
-    output: {
-        filename: '[name]-[hash].js',
-        path: ROOT_PATHS.dist,
-        publicPath: '/'
-    }
+  output: {
+    filename: '[name]-[hash].js',
+    path: ROOT_PATHS.dist,
+    publicPath: '/'
+  }
 };
 
 const optimizationConfig = {
-    optimization: {
-        minimizer: [
-            new OptimizeCSSAssetsPlugin(),
-            new UglifyJsPlugin()
-        ],
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    chunks: 'initial',
-                    name: 'vendor',
-                    test: /[\\/]node_modules[\\/]/
-                }
-            }
+  optimization: {
+    minimizer: [new OptimizeCSSAssetsPlugin(), new UglifyJsPlugin()],
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          chunks: 'initial',
+          name: 'vendor',
+          test: /[\\/]node_modules[\\/]/
         }
+      }
     }
+  }
 };
 
 const commonConfig = merge([
-    entryConfig,
-    getHtml({ title: 'React Redux SCSS Webpack Starter', template: path.join(ROOT_PATHS.src, 'index.html') }),
-    loadJs({ include: ROOT_PATHS.src, exclude: '/node_modules/', options: { cacheDirectory: true } }),
+  entryConfig,
+  getHtml({ title: 'React Redux SCSS Webpack Starter', template: path.join(ROOT_PATHS.src, 'index.html') }),
+  loadJs({ include: ROOT_PATHS.src, exclude: '/node_modules/', options: { cacheDirectory: true } })
 ]);
 
 const productionConfig = merge([
-    clean(ROOT_PATHS.dist),
-    commonConfig,
-    loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
-    loadStyles({ production: true }),
-    optimizationConfig,
-    outputConfig
+  clean(ROOT_PATHS.dist),
+  commonConfig,
+  loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
+  loadStyles({ production: true }),
+  optimizationConfig,
+  outputConfig
 ]);
 
 const developmentConfig = merge([
-    commonConfig,
-    devServer({ host: 'localhost', port: 9090 }),
-    getSourcemaps({ type: 'cheap-module-eval-source-map' }),
-    loadFonts({ options: { name: '[name].[ext]' } }),
-    loadStyles({})
+  commonConfig,
+  devServer({ host: 'localhost', port: 9090 }),
+  getSourcemaps({ type: 'cheap-module-eval-source-map' }),
+  loadFonts({ options: { name: '[name].[ext]' } }),
+  loadStyles({})
 ]);
 
 export default mode => {
-    process.env.BABEL_ENV = mode;
+  process.env.BABEL_ENV = mode;
 
-    if (mode === 'production') return merge(productionConfig, { mode });
-    return merge(developmentConfig, { mode });
+  if (mode === 'production') return merge(productionConfig, { mode });
+  return merge(developmentConfig, { mode });
 };
