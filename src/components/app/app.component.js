@@ -1,11 +1,11 @@
 import 'animate.css/animate.css';
 import 'normalize.css/normalize.css';
 import 'font-awesome/css/font-awesome.css';
+import '../../styles/index.scss';
 
 import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
-/* eslint-disable no-unused-vars */ import globalStyles from '../../styles/index.scss'; /* eslint-enable no-unused-vars */
 import styles from './app.style.scss';
 
 export class App extends Component {
