@@ -65,12 +65,13 @@ The following are the dependencies in `package.json` separated into the categori
 * stylelint-config-standard
 
 #### Transpilation
-* babel-cli
-* babel-preset-env
-* babel-preset-react
-* babel-preset-stage-0
+* @babel/cli
+* @babel/plugin-proposal-class-properties
+* @babel/preset-env
+* @babel/preset-react
 
 #### Webpack
+* @babel/register // this is necessary to use the .babel.js extension on the Wepback configuration
 * clean-webpack-plugin
 * path
 * webpack
@@ -104,12 +105,12 @@ The following are the dependencies in `package.json` separated into the categori
 
 #### JavaScript
 * classnames
+* connected-react-router
+* lodash
 * lodash
 * prop-types
 * react
 * react-dom
-* connected-react-router
-* lodash
 * react-redux
 * react-router-dom
 * redux
@@ -121,9 +122,10 @@ The following are the dependencies in `package.json` separated into the categori
 * animate.css
 
 ### Testing
+* @babel/preset-env
+* @babel/preset-react
+* babel-core // this is necessary as a bridge until babel-jest supports Babel 7
 * babel-jest
-* babel-preset-env
-* babel-preset-react
 * enzyme
 * enzyme-adapter-react-16
 * eslint-plugin-jest
