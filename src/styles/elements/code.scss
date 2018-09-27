@@ -1,16 +1,16 @@
 @import '../config/variables';
 
 code {
-    -webkit-overflow-scrolling: touch;
-    background: $color-white;
-    border-radius: $border-radius;
-    color: $color-secondary-dark;
-    display: block;
-    overflow: auto;
-    padding: $spacer / 8 $spacer / 2;
+  -webkit-overflow-scrolling: touch;
+  background: $color-white;
+  border-radius: $border-radius;
+  color: $color-secondary-dark;
+  display: block;
+  overflow: auto;
+  padding: $spacer / 8 $spacer / 2;
 
-    p & {
-        display: inline-block;
-        overflow: initial;
-    }
+  p & {
+    display: inline-block;
+    overflow: initial;
+  }
 }

@@ -1,19 +1,19 @@
 @import '../config/variables';
 
 p {
-    margin-bottom: $spacer / 2;
-    margin-top: $spacer / 2;
+  margin-bottom: $spacer / 2;
+  margin-top: $spacer / 2;
 
-    &:first-child {
-        margin-top: 0;
-    }
+  &:first-child {
+    margin-top: 0;
+  }
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-    @media screen and (min-width: $width-mobile) {
-        margin-top: $spacer;
-        margin-bottom: $spacer;
-    }
+  @media screen and (min-width: $width-mobile) {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+  }
 }

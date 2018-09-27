@@ -9,30 +9,27 @@ import PropTypes from 'prop-types';
 import styles from './app.style.scss';
 
 export class App extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
+  };
 
-    static propTypes = {
-        children: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ])
-    };
+  static defaultProps = {
+    children: null
+  };
 
-    static defaultProps = {
-        children: null
-    };
+  componentDidMount() {
+    // When the app.js component mounts it fires an event called 'appReady'
+    const event = new CustomEvent('appReady', {
+      bubbles: true,
+      cancelable: false
+    });
 
-    componentDidMount() {
-        // When the app.js component mounts it fires an event called 'appReady'
-        const event = new CustomEvent('appReady', {
-            bubbles: true,
-            cancelable: false
-        });
+    document.dispatchEvent(event);
+  }
 
-        document.dispatchEvent(event);
-    }
+  render() {
+    const { children } = this.props;
 
-    render() {
-        const { children } = this.props;
-
-        return (
-            <div className={styles.root}>{children}</div>
-        );
-    }
+    return <div className={styles.root}>{children}</div>;
+  }
 }

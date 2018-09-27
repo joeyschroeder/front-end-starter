@@ -4,26 +4,30 @@ import React from 'react';
 import styles from './app-bar-button.style.scss';
 
 export const AppBarButton = props => {
+  const { children, onClick, to } = props;
 
-    const { children, onClick, to } = props;
-
-    if (to) return (
-        <Link className={styles.root} to={to}>{children}</Link>
-    );
-
+  if (to)
     return (
-        <button className={styles.root} type='button' onClick={onClick}>{children}</button>
+      <Link className={styles.root} to={to}>
+        {children}
+      </Link>
     );
+
+  return (
+    <button className={styles.root} type="button" onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 AppBarButton.propTypes = {
-    children: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ]),
-    onClick: PropTypes.func,
-    to: PropTypes.string
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  onClick: PropTypes.func,
+  to: PropTypes.string
 };
 
 AppBarButton.defaultProps = {
-    children: null,
-    onClick: null,
-    to: ''
+  children: null,
+  onClick: null,
+  to: ''
 };

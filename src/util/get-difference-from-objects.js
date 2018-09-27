@@ -1,13 +1,12 @@
 export const getDifferenceFromObjects = (object = {}, comparison = {}) => {
+  const difference = [];
+  const comparisonKeys = Object.keys(comparison).map(key => {
+    return Object.assign({}, { key }, { value: comparison[key] });
+  });
 
-    const difference = [];
-    const comparisonKeys = Object.keys(comparison).map(key => {
-        return Object.assign({}, { key }, { value: comparison[key] });
-    });
+  comparisonKeys.forEach(item => {
+    if (object[item.key] !== item.value) difference.push(item);
+  });
 
-    comparisonKeys.forEach(item => {
-        if (object[item.key] !== item.value) difference.push(item);
-    });
-
-    return difference;
+  return difference;
 };

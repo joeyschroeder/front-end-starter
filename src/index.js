@@ -8,18 +8,19 @@ import { render } from 'react-dom';
 const history = createBrowserHistory();
 const store = configureStore(history);
 
-const init = Component => render(
+const init = Component =>
+  render(
     <AppContainer>
-        <Component history={history} store={store} />
+      <Component history={history} store={store} />
     </AppContainer>,
-    document.getElementById('app'))
-;
+    document.getElementById('app')
+  );
 
 init(Root);
 
 if (module.hot) {
-    module.hot.accept('./components/root/root.component', () => {
-        const nextRoot = require('./components/root/root.component').Root;
-        init(nextRoot);
-    });
+  module.hot.accept('./components/root/root.component', () => {
+    const nextRoot = require('./components/root/root.component').Root;
+    init(nextRoot);
+  });
 }

@@ -4,35 +4,27 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export class Icon extends Component {
+  static propTypes = {
+    className: PropTypes.string,
+    name: PropTypes.string
+  };
 
-    static propTypes = {
-        className: PropTypes.string,
-        name: PropTypes.string
-    };
+  static defaultProps = {
+    className: '',
+    name: 'bell-o'
+  };
 
-    static defaultProps = {
-        className: '',
-        name: 'bell-o'
-    };
+  getClassName() {
+    const { className, name } = this.props;
 
-    getClassName() {
-        const { className, name } = this.props;
+    const result = classNames('fa', 'fa-fw', className, { [`fa-${name}`]: name });
 
-        const result = classNames(
-            'fa',
-            'fa-fw',
-            className,
-            { [`fa-${name}`]: name }
-        );
+    return result;
+  }
 
-        return result;
-    }
+  render() {
+    const className = this.getClassName();
 
-    render() {
-        const className = this.getClassName();
-
-        return (
-            <i className={className} aria-hidden='true' />
-        );
-    }
+    return <i className={className} aria-hidden="true" />;
+  }
 }

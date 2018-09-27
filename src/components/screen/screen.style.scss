@@ -2,27 +2,27 @@
 @import '../../styles/mixins/transition';
 
 .root {
-    @include transition(background-color);
+  @include transition(background-color);
 
-    -webkit-overflow-scrolling: touch;
-    box-sizing: border-box;
-    flex: 1;
-    overflow-y: auto;
-    padding: $spacer;
-    position: relative;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacer;
+  position: relative;
 
-    @media screen and (min-width: $width-mobile) {
-        padding: $spacer * 2 $spacer;
-    }
+  @media screen and (min-width: $width-mobile) {
+    padding: $spacer * 2 $spacer;
+  }
 
-    @media print {
-        padding: 0;
-    }
+  @media print {
+    padding: 0;
+  }
 }
 
 .root.centerContent {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

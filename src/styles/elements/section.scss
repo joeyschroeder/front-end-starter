@@ -1,9 +1,9 @@
 @import '../config/variables';
 
 section {
-    margin-bottom: $spacer;
+  margin-bottom: $spacer;
 
-    @media screen and (min-width: $width-mobile) {
-        margin-bottom: $spacer * 2;
-    }
+  @media screen and (min-width: $width-mobile) {
+    margin-bottom: $spacer * 2;
+  }
 }

@@ -7,25 +7,28 @@ import { ROUTES } from '../../routes';
 import React from 'react';
 
 export const Main = props => {
+  const { children } = props;
 
-    const { children } = props;
-
-    return (
-        <App>
-            <AppBar>
-                <AppBarButton to={ROUTES.SPLASH}><Icon name='home' /></AppBarButton>
-                <AppBarButton to={ROUTES.REDUX}><Icon name='database' /></AppBarButton>
-                {/* <AppBarButton to={ROUTES.HOT_RELOAD}><Icon name='fire' /></AppBarButton> */}
-            </AppBar>
-            {children}
-        </App>
-    );
+  return (
+    <App>
+      <AppBar>
+        <AppBarButton to={ROUTES.SPLASH}>
+          <Icon name="home" />
+        </AppBarButton>
+        <AppBarButton to={ROUTES.REDUX}>
+          <Icon name="database" />
+        </AppBarButton>
+        {/* <AppBarButton to={ROUTES.HOT_RELOAD}><Icon name='fire' /></AppBarButton> */}
+      </AppBar>
+      {children}
+    </App>
+  );
 };
 
 Main.propTypes = {
-    children: PropTypes.oneOfType([ PropTypes.arrayOf(PropTypes.node), PropTypes.node ])
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node])
 };
 
 Main.defaultProps = {
-    children: null
+  children: null
 };

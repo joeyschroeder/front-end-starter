@@ -55,9 +55,12 @@ The following are the dependencies in `package.json` separated into the categori
 * babel-eslint
 * eslint
 * eslint-config-airbnb
+* eslint-config-prettier
+* eslint-config-prettier
 * eslint-plugin-import
 * eslint-plugin-jsx-a11y
 * eslint-plugin-react
+* prettier
 * react-hot-loader
 
 #### Linting Styles

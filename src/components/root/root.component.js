@@ -9,26 +9,26 @@ import { Route } from 'react-router';
 import { SplashScreen } from '../../screens/splash/splash.screen';
 
 export const Root = props => {
-    const { history, store } = props;
+  const { history, store } = props;
 
-    return (
-        <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <Main>
-                    <Route exact path={ROUTES.SPLASH} component={SplashScreen} />
-                    <Route exact path={ROUTES.REDUX} component={ConnectedReduxScreen} />
-                </Main>
-            </ConnectedRouter>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <Main>
+          <Route exact path={ROUTES.SPLASH} component={SplashScreen} />
+          <Route exact path={ROUTES.REDUX} component={ConnectedReduxScreen} />
+        </Main>
+      </ConnectedRouter>
+    </Provider>
+  );
 };
 
 Root.propTypes = {
-    history: PropTypes.object,
-    store: PropTypes.object
+  history: PropTypes.object,
+  store: PropTypes.object
 };
 
 Root.defaultProps = {
-    history: null,
-    store: null
+  history: null,
+  store: null
 };

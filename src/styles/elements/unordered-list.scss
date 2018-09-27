@@ -1,27 +1,27 @@
 @import '../config/variables';
 
 ul {
-    list-style: none;
-    margin-bottom: $spacer;
-    margin-top: $spacer;
-    padding-left: $spacer * 2;
+  list-style: none;
+  margin-bottom: $spacer;
+  margin-top: $spacer;
+  padding-left: $spacer * 2;
 
-    &:first-child {
-        margin-top: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      color: $color-secondary;
+      content: '•';
+      left: -$spacer * 1.5;
+      position: absolute;
     }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    li {
-        position: relative;
-
-        &::before {
-            color: $color-secondary;
-            content: '•';
-            left: -$spacer * 1.5;
-            position: absolute;
-        }
-    }
+  }
 }

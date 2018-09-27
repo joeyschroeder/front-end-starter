@@ -2,22 +2,22 @@
 @import '../mixins/transition';
 
 a {
-    @include transition(color);
+  @include transition(color);
 
-    color: $color-primary;
-    font-weight: $font-weight-base;
-    text-decoration: underline;
+  color: $color-primary;
+  font-weight: $font-weight-base;
+  text-decoration: underline;
 
-    &:hover {
-        color: $color-primary-dark;
-    }
+  &:hover {
+    color: $color-primary-dark;
+  }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: inherit;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
+  }
 }

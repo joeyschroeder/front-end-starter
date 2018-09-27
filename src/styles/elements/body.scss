@@ -3,16 +3,16 @@
 @import '../mixins/font-size';
 
 body {
-    @include font-size($font-size-base);
-    @include line-height($line-height-base);
+  @include font-size($font-size-base);
+  @include line-height($line-height-base);
 
-    background: $color-background;
-    color: $color-secondary-dark;
-    font-family: $font-family-sans-serif;
-    height: 100%;
-    overflow: hidden;
+  background: $color-background;
+  color: $color-secondary-dark;
+  font-family: $font-family-sans-serif;
+  height: 100%;
+  overflow: hidden;
 
-    @media print {
-        background: transparent;
-    }
+  @media print {
+    background: transparent;
+  }
 }
