@@ -1,15 +1,15 @@
-import { resetTestProp, selectTestValue, updateTestProp } from '../../redux/test';
+import { resetSampleValue, selectSampleValue, updateSampleValue } from '../../redux/sample';
 
 import { ReduxScreen } from './redux.screen';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
-  value: selectTestValue(state)
+  value: selectSampleValue(state)
 });
 
 const mapDispatchToProps = {
-  update: updateTestProp,
-  reset: resetTestProp
+  update: updateSampleValue,
+  reset: resetSampleValue
 };
 
 export const ConnectedReduxScreen = connect(
