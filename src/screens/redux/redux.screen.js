@@ -1,7 +1,7 @@
-import { BlockButton } from '../../components/block-button/block-button.component';
+import { BlockButton } from '../../components/block-button/block-button';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Screen } from '../../components/screen/screen.component';
+import { Screen } from '../../components/screen/screen';
 import styles from './redux.screen.style.scss';
 
 export const ReduxScreen = props => {

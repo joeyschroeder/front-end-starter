@@ -1,5 +1,5 @@
 import React from 'react';
-import { Screen } from '../../components/screen/screen.component';
+import { Screen } from '../../components/screen/screen';
 import styles from './splash.style.scss';
 
 export const SplashScreen = () => {

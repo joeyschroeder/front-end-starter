@@ -1,7 +1,7 @@
-import { App } from '../app/app.component';
-import { AppBar } from '../app-bar/app-bar.component';
-import { AppBarButton } from '../app-bar-button/app-bar-button.component';
-import { Icon } from '../icon/icon.component';
+import { App } from '../app/app';
+import { AppBar } from '../app-bar/app-bar';
+import { AppBarButton } from '../app-bar-button/app-bar-button';
+import { Icon } from '../icon/icon';
 import PropTypes from 'prop-types';
 import { ROUTES } from '../../routes';
 import React from 'react';

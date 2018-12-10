@@ -1,6 +1,6 @@
 import { ConnectedReduxScreen } from '../../screens/redux/redux.screen.connected';
 import { ConnectedRouter } from 'connected-react-router';
-import { Main } from '../main/main.component';
+import { Main } from '../main/main';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ROUTES } from '../../routes';

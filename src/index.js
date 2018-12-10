@@ -1,6 +1,6 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
-import { Root } from './components/root/root.component';
+import { Root } from './components/root/root';
 import { configureStore } from './util/configure-store';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';
@@ -19,8 +19,8 @@ const init = Component =>
 init(Root);
 
 if (module.hot) {
-  module.hot.accept('./components/root/root.component', () => {
-    const nextRoot = require('./components/root/root.component').Root;
+  module.hot.accept('./components/root/root', () => {
+    const nextRoot = require('./components/root/root').Root;
     init(nextRoot);
   });
 }
