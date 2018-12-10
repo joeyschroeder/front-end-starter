@@ -62,7 +62,8 @@ const developmentConfig = merge([
   devServer({ host: 'localhost', port: 9090 }),
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
-  loadStyles({})
+  loadStyles({}),
+  { output: { publicPath: '/' } }
 ]);
 
 export default mode => {
