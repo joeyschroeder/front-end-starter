@@ -1,7 +1,7 @@
 import { createAction, handleActions } from 'redux-actions';
 
 // Default State
-const DEFAULT_STATE = { sampleValue: 0 };
+export const DEFAULT_STATE = { sampleValue: 0 };
 
 // Actions
 const UPDATE = 'sample/UPDATE';
