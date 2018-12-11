@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SplashScreen /> should render correctly 1`] = `
+<div
+  className="animated fadeIn root root centerContent"
+>
+  <div
+    className="primary"
+  >
+    <h1>
+      <strong>
+        Front-End
+      </strong>
+       Starter
+    </h1>
+    <p>
+      This project is designed to get you up and running with your next front-end, JavaScript application faster than ever! This project includes 
+      <strong>
+        React
+      </strong>
+      , 
+      <strong>
+        Redux
+      </strong>
+      , and many other utilities for easily maintaining a front-end application.
+    </p>
+  </div>
+</div>
+`;
