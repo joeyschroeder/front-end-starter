@@ -110,7 +110,6 @@ The following are the dependencies in `package.json` separated into the categori
 * classnames
 * connected-react-router
 * lodash
-* lodash
 * prop-types
 * react
 * react-dom
