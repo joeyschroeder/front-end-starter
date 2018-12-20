@@ -1,4 +1,4 @@
-# Front-End Starter
+# 🌈 Front-End Starter
 An application using [React](https://reactjs.org/) designed to be used as a starting point for front-end applications.
 
 ## Getting Started
