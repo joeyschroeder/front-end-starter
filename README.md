@@ -24,7 +24,7 @@ First, you'll need to clone this repository to your working directory on your lo
 
 ```
 cd /path/to/working/directory
-hg clone github.com/joeyschroeder/front-end-starter
+git clone github.com/joeyschroeder/front-end-starter
 cd /front-end-starter
 npm install
 ```
