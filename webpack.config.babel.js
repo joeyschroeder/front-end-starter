@@ -15,6 +15,39 @@ const ROOT_PATHS = {
   src: path.join(__dirname, 'src')
 };
 
+const statConfig = {
+  stats: {
+    all: undefined,
+    assets: true,
+    builtAt: true,
+    cached: false,
+    cachedAssets: false,
+    children: false,
+    chunkGroups: false,
+    chunkModules: false,
+    chunkOrigins: false,
+    chunks: false,
+    colors: true,
+    depth: false,
+    entrypoints: false,
+    env: true,
+    errorDetails: true,
+    errors: true,
+    hash: true,
+    maxModules: 15,
+    modules: false,
+    performance: true,
+    providedExports: false,
+    publicPath: true,
+    reasons: true,
+    source: false,
+    timings: true,
+    usedExports: false,
+    version: true,
+    warnings: false
+  }
+};
+
 const entryConfig = {
   entry: path.join(ROOT_PATHS.src, 'index.js')
 };
@@ -54,7 +87,8 @@ const productionConfig = merge([
   loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
   loadStyles({ production: true }),
   optimizationConfig,
-  outputConfig
+  outputConfig,
+  statConfig
 ]);
 
 const developmentConfig = merge([
