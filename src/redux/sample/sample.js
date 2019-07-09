@@ -1,8 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
 
-// Default State
-export const DEFAULT_STATE = { sampleValue: 0 };
-
 // Actions
 const UPDATE = 'sample/UPDATE';
 const RESET = 'sample/RESET';
@@ -11,9 +8,8 @@ const RESET = 'sample/RESET';
 export const updateSampleValue = createAction(UPDATE);
 export const resetSampleValue = createAction(RESET);
 
-// Selectors
-export const selectSample = (state = {}) => state.sample || {};
-export const selectSampleValue = state => selectSample(state).sampleValue || DEFAULT_STATE.sampleValue;
+// Default State
+export const DEFAULT_STATE = { sampleValue: 0 };
 
 // Reducer
 export const sampleReducer = handleActions(
@@ -26,3 +22,9 @@ export const sampleReducer = handleActions(
   },
   DEFAULT_STATE
 );
+
+// Selectors
+export const selectSample = (state = {}) => state.sample || {};
+export const selectSampleValue = state => selectSample(state).sampleValue || DEFAULT_STATE.sampleValue;
+
+// Thunks
