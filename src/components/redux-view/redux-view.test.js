@@ -1,5 +1,5 @@
 /* global React, create */
-import { ReduxView } from './redux-view.component';
+import { ReduxView } from './redux-view';
 
 describe('<ReduxView />', () => {
   it('should render correctly', () => {

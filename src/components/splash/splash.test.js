@@ -1,5 +1,5 @@
 /* global React, create */
-import { Splash } from './splash.component';
+import { Splash } from './splash';
 
 describe('<Splash />', () => {
   it('should render correctly', () => {
