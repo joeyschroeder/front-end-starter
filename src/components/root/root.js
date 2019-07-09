@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ROUTES } from '../../routes';
 import React from 'react';
-import { ReduxViewConnected } from '../redux-view/redux-view.component.connected';
+import { ReduxViewConnected } from '../redux-view/redux-view.connected';
 import { Route } from 'react-router';
-import { Splash } from '../splash/splash.component';
+import { Splash } from '../splash/splash';
 
 export const Root = props => {
   const { history, store } = props;
