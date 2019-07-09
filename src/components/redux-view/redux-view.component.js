@@ -1,10 +1,10 @@
-import { BlockButton } from '../../components/block-button/block-button';
+import { BlockButton } from '../block-button/block-button';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Screen } from '../../components/screen/screen';
-import styles from './redux.screen.style.scss';
+import { Screen } from '../screen/screen';
+import styles from './redux-view.style.scss';
 
-export const ReduxScreen = props => {
+export const ReduxView = props => {
   const { reset, update, value } = props;
 
   return (
@@ -33,13 +33,13 @@ export const ReduxScreen = props => {
   );
 };
 
-ReduxScreen.propTypes = {
+ReduxView.propTypes = {
   reset: PropTypes.func,
   update: PropTypes.func,
   value: PropTypes.number
 };
 
-ReduxScreen.defaultProps = {
+ReduxView.defaultProps = {
   reset: () => {},
   update: () => {},
   value: 0

@@ -1,10 +1,10 @@
 import React from 'react';
-import { ReduxScreen } from './redux.screen';
+import { ReduxView } from './redux-view.component';
 import { create } from 'react-test-renderer';
 
-describe('<ReduxScreen />', () => {
+describe('<ReduxView />', () => {
   it('should render correctly', () => {
-    const component = create(<ReduxScreen />).toJSON();
+    const component = create(<ReduxView />).toJSON();
     expect(component).toMatchSnapshot();
   });
 });

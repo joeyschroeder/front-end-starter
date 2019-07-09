@@ -1,8 +1,8 @@
 import React from 'react';
-import { Screen } from '../../components/screen/screen';
+import { Screen } from '../screen/screen';
 import styles from './splash.style.scss';
 
-export const SplashScreen = () => {
+export const Splash = () => {
   return (
     <Screen centerContent className={styles.root}>
       <div className={styles.primary}>

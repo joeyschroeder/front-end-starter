@@ -1,12 +1,12 @@
-import { ConnectedReduxScreen } from '../../screens/redux/redux.screen.connected';
 import { ConnectedRouter } from 'connected-react-router';
 import { Main } from '../main/main';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ROUTES } from '../../routes';
 import React from 'react';
+import { ReduxViewConnected } from '../redux-view/redux-view.component.connected';
 import { Route } from 'react-router';
-import { SplashScreen } from '../../screens/splash/splash.screen';
+import { SplashScreen } from '../splash/splash.component';
 
 export const Root = props => {
   const { history, store } = props;
@@ -16,7 +16,7 @@ export const Root = props => {
       <ConnectedRouter history={history}>
         <Main>
           <Route exact path={ROUTES.SPLASH} component={SplashScreen} />
-          <Route exact path={ROUTES.REDUX} component={ConnectedReduxScreen} />
+          <Route exact path={ROUTES.REDUX} component={ReduxViewConnected} />
         </Main>
       </ConnectedRouter>
     </Provider>

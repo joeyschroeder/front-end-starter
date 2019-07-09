@@ -1,6 +1,6 @@
 import { resetSampleValue, selectSampleValue, updateSampleValue } from '../../redux/sample/sample';
 
-import { ReduxScreen } from './redux.screen';
+import { ReduxView } from './redux-view.component';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
@@ -12,7 +12,7 @@ const mapDispatchToProps = {
   reset: resetSampleValue
 };
 
-export const ConnectedReduxScreen = connect(
+export const ReduxViewConnected = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ReduxScreen);
+)(ReduxView);
