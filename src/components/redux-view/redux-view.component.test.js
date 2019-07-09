@@ -1,6 +1,5 @@
-import React from 'react';
+/* global React, create */
 import { ReduxView } from './redux-view.component';
-import { create } from 'react-test-renderer';
 
 describe('<ReduxView />', () => {
   it('should render correctly', () => {

@@ -1,6 +1,5 @@
+/* global React, create */
 import { BlockButton } from './block-button';
-import React from 'react';
-import { create } from 'react-test-renderer';
 
 describe('<BlockButton />', () => {
   it('should render correctly', () => {

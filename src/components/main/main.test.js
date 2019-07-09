@@ -1,5 +1,5 @@
 import { Main } from './main';
-import React from 'react';
+/* global React */
 import ShallowRenderer from 'react-test-renderer/shallow';
 
 describe('<Main />', () => {

@@ -1,6 +1,5 @@
+/* global React, create */
 import { Icon } from './icon';
-import React from 'react';
-import { create } from 'react-test-renderer';
 
 describe('<Icon />', () => {
   it('should render correctly', () => {

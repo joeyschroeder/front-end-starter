@@ -1,6 +1,5 @@
-import React from 'react';
+/* global React, create */
 import { Screen } from './screen';
-import { create } from 'react-test-renderer';
 
 describe('<Screen />', () => {
   it('should render correctly', () => {

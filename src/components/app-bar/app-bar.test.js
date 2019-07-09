@@ -1,6 +1,5 @@
+/* global React, create */
 import { AppBar } from './app-bar';
-import React from 'react';
-import { create } from 'react-test-renderer';
 
 describe('<AppBar />', () => {
   it('should render correctly', () => {

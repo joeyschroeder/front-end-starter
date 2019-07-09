@@ -1,6 +1,5 @@
+/* global React, create */
 import { AppBarButton } from './app-bar-button';
-import React from 'react';
-import { create } from 'react-test-renderer';
 
 describe('<AppBarButton />', () => {
   it('should render correctly', () => {

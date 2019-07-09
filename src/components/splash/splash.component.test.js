@@ -1,6 +1,5 @@
-import React from 'react';
+/* global React, create */
 import { Splash } from './splash.component';
-import { create } from 'react-test-renderer';
 
 describe('<Splash />', () => {
   it('should render correctly', () => {
