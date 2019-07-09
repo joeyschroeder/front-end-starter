@@ -1,24 +1,25 @@
 {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "coverageReporters": [
-      "lcov",
-      "text"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    },
-    "setupFiles": [
-      "./test-setup.js"
-    ],
-    "testMatch": [
-      "**/?(*.)+(test).js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
+  "collectCoverageFrom": [
+    "src/**/*.js"
+  ],
+  "coverageReporters": [
+    "lcov",
+    "text"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  "reporters": ["jest-dot-reporter"],
+  "setupFiles": [
+    "./test-setup.js"
+  ],
+  "testMatch": [
+    "**/?(*.)+(test).js"
+  ],
+  "testPathIgnorePatterns": [
+    "<rootDir>/node_modules/"
+  ],
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  }
 }
