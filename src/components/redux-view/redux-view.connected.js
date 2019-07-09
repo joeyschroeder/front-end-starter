@@ -1,6 +1,6 @@
 import { resetSampleValue, selectSampleValue, updateSampleValue } from '../../redux/sample/sample';
 
-import { ReduxView } from './redux-view.component';
+import { ReduxView } from './redux-view';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => ({
