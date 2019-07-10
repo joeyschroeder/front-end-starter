@@ -33,14 +33,29 @@ npm install
 ### `build`
 This command runs `webpack` in "production" mode.  It uses the `src/index.js` file as it's entry point, and generates a JavaScript `main.js` and `vendor.js` file in `docs/`.
 
-### `coverage`
-This command runs `jest --coverage`.  It prints the test successes/failures in the command line and creates an .html test coverage report in `./coverage/lcov-report/index.html`.
+### `clean`
+This command delets the `dist/` directory.
+
+### `eslint`
+This command runs `eslint src/`.  It prints eslint warnings and errors in the command line.
+
+### `eslint:fix`
+This command runs `eslint --fix src/`.  It attempts to fix any eslint warnings/errors then prints the remaining warnings and errors in the command line.
 
 ### `start`
 This command runs `webpack-dev-server` in "development" mode. Hot reloading is enabled.
 
+### `stylelint`
+This command runs `stylelint 'src/**/*/*.scss`.  It prints styelint warnings and errors in the command line.
+
+### `stylelint:fix`
+This command runs `stylelint --fix 'src/**/*/*.scss`.  It attempts to fix any stylelint warnings/errors then prints the remaining warnings and errors in the command line.
+
 ### `test`
 This command runs `jest`. It prints test successes/failures in the command line.
+
+### `test:coverage`
+This command runs `jest --coverage`.  It prints the test successes/failures in the command line and creates an .html test coverage report in `./coverage/lcov-report/index.html`.
 
 ## To-Dos
 * Contribution Guidelines
@@ -56,9 +71,10 @@ The following are the dependencies in `package.json` separated into the categori
 * eslint
 * eslint-config-airbnb
 * eslint-config-prettier
-* eslint-config-prettier
+* eslint-import-resolver-babel-module
 * eslint-plugin-import
 * eslint-plugin-jsx-a11y
+* eslint-plugin-prettier
 * eslint-plugin-react
 * prettier
 * react-hot-loader
@@ -120,8 +136,8 @@ The following are the dependencies in `package.json` separated into the categori
 * redux-thunk
 
 #### Styles
-* normalize.css
 * animate.css
+* normalize.css
 
 ### Testing
 * @babel/preset-env
@@ -131,8 +147,10 @@ The following are the dependencies in `package.json` separated into the categori
 * enzyme
 * enzyme-adapter-react-16
 * eslint-plugin-jest
+* eslint-plugin-jest
 * identity-obj-proxy
 * jest
+* jest-dot-reporter
 * react
 * react-dom
 * react-test-renderer
