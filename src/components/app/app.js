@@ -1,7 +1,7 @@
 import 'animate.css/animate.css';
 import 'normalize.css/normalize.css';
 import 'font-awesome/css/font-awesome.css';
-import '../../styles/index.scss';
+import 'styles/index.scss';
 
 import React, { Component } from 'react';
 

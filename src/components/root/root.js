@@ -1,12 +1,12 @@
 import { ConnectedRouter } from 'connected-react-router';
-import { Main } from '../main/main';
+import { Main } from 'components/main/main';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
-import { ROUTES } from '../../routes';
+import { ROUTES } from 'constants/routes';
 import React from 'react';
-import { ReduxViewConnected } from '../redux-view/redux-view.connected';
+import { ReduxViewConnected } from 'components/redux-view/redux-view.connected';
 import { Route } from 'react-router';
-import { Splash } from '../splash/splash';
+import { Splash } from 'components/splash/splash';
 
 export const Root = props => {
   const { history, store } = props;

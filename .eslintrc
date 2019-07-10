@@ -30,5 +30,19 @@
     "react/jsx-one-expression-per-line": [ 0 ],
     "react/no-unused-prop-types": 1,
     "semi": [ "error", "always" ]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "components": "./src/components",
+          "constants": "./src/constants",
+          "fonts": "./src/fonts",
+          "store": "./src/store",
+          "styles": "./src/styles",
+          "util": "./src/util"
+        }
+      }
+    }
   }
 }

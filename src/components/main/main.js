@@ -1,9 +1,9 @@
-import { App } from '../app/app';
-import { AppBar } from '../app-bar/app-bar';
-import { AppBarButton } from '../app-bar-button/app-bar-button';
-import { Icon } from '../icon/icon';
+import { App } from 'components/app/app';
+import { AppBar } from 'components/app-bar/app-bar';
+import { AppBarButton } from 'components/app-bar-button/app-bar-button';
+import { Icon } from 'components/icon/icon';
 import PropTypes from 'prop-types';
-import { ROUTES } from '../../routes';
+import { ROUTES } from 'constants/routes';
 import React from 'react';
 
 export const Main = props => {

@@ -1,4 +1,4 @@
-import { resetSampleValue, selectSampleValue, updateSampleValue } from '../../redux/sample/sample';
+import { resetSampleValue, selectSampleValue, updateSampleValue } from 'store/sample/sample';
 
 import { ReduxView } from './redux-view';
 import { connect } from 'react-redux';

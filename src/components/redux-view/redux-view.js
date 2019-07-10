@@ -1,7 +1,7 @@
-import { BlockButton } from '../block-button/block-button';
+import { BlockButton } from 'components/block-button/block-button';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Screen } from '../screen/screen';
+import { Screen } from 'components/screen/screen';
 import styles from './redux-view.style.scss';
 
 export const ReduxView = props => {
