@@ -1,3 +1,9 @@
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/joeyschroeder/front-end-starter.svg)](https://github.com/joeyschroeder/front-end-starter/issues)
+[![GitHub stars](https://img.shields.io/github/stars/joeyschroeder/front-end-starter.svg)](https://github.com/joeyschroeder/front-end-starter/stargazers)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+
 # 🌈 Front-End Starter
 An application using [React](https://reactjs.org/) and [Redux](https://redux.js.org/) designed to be used as a starting point for front-end applications.
 
