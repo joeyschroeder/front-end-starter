@@ -1,7 +1,7 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import { Root } from './components/root/root';
-import { configureStore } from './util/configure-store';
+import { configureStore } from 'util/configure-store/configure-store';
 import { createBrowserHistory } from 'history';
 import { render } from 'react-dom';
 
