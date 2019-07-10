@@ -6,13 +6,13 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --env production",
     "clean": "rm -rf dist/ && echo \"\\x1b[102m\\x1b[1m CLEAN \\x1b[0m\" Dist directory removed",
-    "coverage": "./node_modules/.bin/jest --config ./jest.config.json --coverage",
     "eslint": "./node_modules/.bin/eslint src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" No JavaScript ESLint errors to fix",
     "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed",
     "start": "./node_modules/.bin/webpack-dev-server --inline --hot --env development",
     "stylelint": "./node_modules/.bin/stylelint 'src/**/*.scss' --config .stylelintrc && echo \"\\x1b[102m\\x1b[1m STYLELINT \\x1b[0m\" No StyleLint SCSS errors to fix",
     "stylelint:fix": "./node_modules/.bin/stylelint --fix 'src/**/*.scss' --config .stylelintrc && echo \"\\x1b[102m\\x1b[1m STYLELINT \\x1b[0m\" StyleLint SCSS errors fixed",
-    "test": "./node_modules/.bin/jest --config ./jest.config.json"
+    "test": "./node_modules/.bin/jest --config ./jest.config.json",
+    "test:coverage": "./node_modules/.bin/jest --config ./jest.config.json --coverage"
   },
   "author": {
     "name": "Joey Schroeder",
