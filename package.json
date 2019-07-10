@@ -34,10 +34,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.0",
+    "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@babel/plugin-transform-react-constant-elements": "^7.5.0",
-    "@babel/preset-env": "^7.5.2",
+    "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.4",
     "autoprefixer": "^9.6.1",
@@ -91,7 +91,7 @@
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.0",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -99,7 +99,7 @@
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "redux": "^4.0.1",
+    "redux": "^4.0.3",
     "redux-actions": "^2.6.5",
     "redux-thunk": "^2.3.0"
   }
