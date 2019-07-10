@@ -21,6 +21,13 @@
       "plugins": [
         "react-hot-loader/babel"
       ]
+    },
+    "production": {
+      "plugins": [
+        "@babel/plugin-transform-react-constant-elements",
+        "lodash",
+        "transform-react-pure-class-to-function"
+      ]
     }
   }
 }

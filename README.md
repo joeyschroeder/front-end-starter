@@ -88,6 +88,8 @@ The following are the dependencies in `package.json` separated into the categori
 * @babel/plugin-proposal-class-properties
 * @babel/preset-env
 * @babel/preset-react
+* babel-plugin-lodash
+* babel-plugin-transform-react-pure-class-to-function
 
 #### Webpack
 * @babel/register // this is necessary to use the .babel.js extension on the Wepback configuration
