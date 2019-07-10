@@ -264,6 +264,7 @@ The following are the dependencies in `package.json` separated into the categori
 * [Babel](https://babeljs.io/) - A JavaScript transpiler
 * [Jest](https://jestjs.io/) - A JavaScript testing framework
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+* [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
 * [Webpack](https://github.com/webpack/webpack) - A JavaScript module bundler
 
 ## Authors
