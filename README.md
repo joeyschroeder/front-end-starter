@@ -42,8 +42,8 @@ This command runs `eslint src/`.  It prints eslint warnings and errors in the co
 ### `eslint:fix`
 This command runs `eslint --fix src/`.  It attempts to fix any eslint warnings/errors then prints the remaining warnings and errors in the command line.
 
-### `start`
-This command runs `webpack-dev-server` in "development" mode. Hot reloading is enabled.
+#### `start`
+This command runs `webpack-dev-server` in "development" mode on the documentation. Hot reloading is enabled.  Once running, you can access the documentation running locally at [localhost:9090/](http://localhost:9090/).
 
 ### `stylelint`
 This command runs `stylelint 'src/**/*/*.scss`.  It prints styelint warnings and errors in the command line.
@@ -53,6 +53,9 @@ This command runs `stylelint --fix 'src/**/*/*.scss`.  It attempts to fix any st
 
 ### `test`
 This command runs `jest`. It prints test successes/failures in the command line.
+
+### `test:changed`
+This command runs `jest -o` on the JavaScript files that have changed or are uncommitted. It prints test successes/failures in the command line.
 
 ### `test:coverage`
 This command runs `jest --coverage`.  It prints the test successes/failures in the command line and creates an .html test coverage report in `./coverage/lcov-report/index.html`.
@@ -65,6 +68,9 @@ This command runs `jest --coverage`.  It prints the test successes/failures in t
 The following are the dependencies in `package.json` separated into the categories in which the dependencies are required.
 
 ### Development
+
+#### Git
+* pre-commit // simple package to integration with git pre-commit
 
 #### Linting JavaScript
 * babel-eslint
@@ -156,6 +162,12 @@ The following are the dependencies in `package.json` separated into the categori
 * react
 * react-dom
 * react-test-renderer
+
+## Built With
+* [Babel](https://babeljs.io/) - A JavaScript transpiler
+* [Jest](https://jestjs.io/) - A JavaScript testing framework
+* [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+* [Webpack](https://github.com/webpack/webpack) - A JavaScript module bundler
 
 ## Authors
 
