@@ -1,7 +1,7 @@
-import { Root } from './root';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import { configureStore } from 'util/configure-store/configure-store';
 import { createMemoryHistory } from 'history';
+import { Root } from './root';
 /* global React */
 
 describe('<Root />', () => {
