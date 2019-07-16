@@ -128,7 +128,7 @@ To check the test coverage of the application run `npm run lib:coverage`.  This 
 
 ## Scripts
 ### `build`
-This command runs `webpack` in "production" mode.  It uses the `src/index.js` file as it's entry point, and generates a JavaScript `main.js` and `vendor.js` file in `docs/`.
+This command runs `webpack` in "production" mode.  It uses the `src/index.js` file as it's entry point, and generates a JavaScript `main.js` and `vendor.js` file in `dist/`.
 
 ### `clean`
 This command delets the `dist/` directory.
@@ -156,10 +156,6 @@ This command runs `jest -o` on the JavaScript files that have changed or are unc
 
 ### `test:coverage`
 This command runs `jest --coverage`.  It prints the test successes/failures in the command line and creates an .html test coverage report in `./coverage/lcov-report/index.html`.
-
-## To-Dos
-* Contribution Guidelines
-* Documentation
 
 ## Dependencies
 The following are the dependencies in `package.json` separated into the categories in which the dependencies are required.
