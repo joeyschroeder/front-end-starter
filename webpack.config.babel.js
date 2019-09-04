@@ -1,5 +1,7 @@
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+import merge from 'webpack-merge';
+import path from 'path';
 import { clean } from './webpack/clean';
 import { devServer } from './webpack/dev-server';
 import { getHtml } from './webpack/get-html';
@@ -7,8 +9,6 @@ import { getSourcemaps } from './webpack/get-sourcemaps';
 import { loadFonts } from './webpack/load-fonts';
 import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
-import merge from 'webpack-merge';
-import path from 'path';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'dist'),
