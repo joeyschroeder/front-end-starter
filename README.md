@@ -28,13 +28,13 @@ An application using [React](https://reactjs.org/) and [Redux](https://redux.js.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-<a name="getting-started"></a>
+<a name="prerequisites"></a>
 ### Prerequisites
 
 #### Node.js & Node Package Manager
 You'll need to download and install Node.js version 6 or higher and Node Package Manager for installing dependencies.  Node Package Manager is installed when installing Node.js.  Download the latest version of Node.js [here](https://nodejs.org/en/download/).
 
-<a name="getting-started"></a>
+<a name="installing"></a>
 ### Installing
 You'll need to clone this repository to your working directory on your local machine, then install the project dependencies using **Node Package Manager** through the command line.
 
