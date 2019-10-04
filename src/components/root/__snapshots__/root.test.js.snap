@@ -12,7 +12,7 @@ exports[`<Root /> should render correctly 1`] = `
     }
   }
 >
-  <Memo(ConnectFunction)
+  <Memo(Connect(ConnectedRouterWithContext))
     history={
       Object {
         "action": "POP",
@@ -64,6 +64,6 @@ exports[`<Root /> should render correctly 1`] = `
         path="/redux"
       />
     </Main>
-  </Memo(ConnectFunction)>
+  </Memo(Connect(ConnectedRouterWithContext))>
 </Provider>
 `;

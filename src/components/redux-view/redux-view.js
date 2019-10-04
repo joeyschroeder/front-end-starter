@@ -22,7 +22,10 @@ export const ReduxView = props => {
         </a>
         .
       </p>
-      <h2>Redux Value: {value}</h2>
+      <h2>
+        Redux Value:
+        {value}
+      </h2>
       <p>
         Click the following buttons to update and reset the value stored in the Redux store. Note that you can leave
         this page and return and the value will be saved.

@@ -27,7 +27,7 @@ exports[`<ReduxView /> should render correctly 1`] = `
     .
   </p>
   <h2>
-    Redux Value: 
+    Redux Value:
     0
   </h2>
   <p>
