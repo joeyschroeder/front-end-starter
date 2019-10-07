@@ -201,13 +201,8 @@ The following are the dependencies in `package.json` separated into the categori
 #### Linting JavaScript
 * babel-eslint
 * eslint
-* eslint-config-airbnb
-* eslint-config-prettier
+* eslint-config-joey
 * eslint-import-resolver-babel-module
-* eslint-plugin-import
-* eslint-plugin-jsx-a11y
-* eslint-plugin-prettier
-* eslint-plugin-react
 * prettier
 * react-hot-loader
 
@@ -282,8 +277,6 @@ The following are the dependencies in `package.json` separated into the categori
 * babel-jest
 * enzyme
 * enzyme-adapter-react-16
-* eslint-plugin-jest
-* eslint-plugin-jest
 * identity-obj-proxy
 * jest
 * jest-dot-reporter

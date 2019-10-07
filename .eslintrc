@@ -1,38 +1,9 @@
 {
-  "env": {
-    "browser": true,
-    "jest/globals": true
-  },
   "extends": [
-    "airbnb",
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
-  ],
-  "parser": "babel-eslint",
-  "plugins": [
-    "jest",
-    "react"
+    "eslint-config-joey"
   ],
   "rules": {
-    "comma-dangle": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.js", "./webpack/**/*.js", "./webpack.config.babel.js", "./test-setup.js"] }],
-    "import/prefer-default-export": [0],
-    "jsx-a11y/click-events-have-key-events": [0],
-    "jsx-a11y/label-has-for": [0],
-    "jsx-a11y/no-static-element-interactions": [0],
-    "no-shadow": 0,
-    "prettier/prettier": 1,
-    "quotes": ["error", "single"],
-    "radix": 0,
-    "react/static-property-placement": [0],
-    "react/forbid-prop-types": [2, { "forbid": ["any"] }],
-    "react/jsx-filename-extension": [0],
-    "react/jsx-indent": 0,
-    "react/jsx-indent-props": 0,
-    "react/jsx-one-expression-per-line": [0],
-    "react/no-unused-prop-types": 1,
-    "semi": ["error", "always"]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.js", "./webpack/**/*.js", "./webpack.config.babel.js", "./test-setup.js"] }]
   },
   "settings": {
     "import/resolver": {
