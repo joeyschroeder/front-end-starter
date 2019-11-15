@@ -212,11 +212,7 @@ The following are the dependencies in `package.json` separated into the categori
 
 #### Transpilation
 * @babel/cli
-* @babel/plugin-proposal-class-properties
-* @babel/preset-env
-* @babel/preset-react
 * babel-plugin-lodash
-* babel-plugin-transform-react-pure-class-to-function
 
 #### Webpack
 * @babel/register // this is necessary to use the .babel.js extension on the Wepback configuration
@@ -254,7 +250,6 @@ The following are the dependencies in `package.json` separated into the categori
 
 #### JavaScript
 * classnames
-* connected-react-router
 * lodash
 * prop-types
 * react
@@ -271,8 +266,6 @@ The following are the dependencies in `package.json` separated into the categori
 
 <a name="dependencies-testing"></a>
 ### Testing
-* @babel/preset-env
-* @babel/preset-react
 * babel-core // this is necessary as a bridge until babel-jest supports Babel 7
 * babel-jest
 * enzyme
