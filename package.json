@@ -37,7 +37,6 @@
     "@babel/register": "^7.6.2",
     "autoprefixer": "^9.6.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
@@ -76,7 +75,6 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "classnames": "^2.2.6",
-    "connected-react-router": "^6.5.2",
     "font-awesome": "^4.7.0",
     "history": "^4.10.1",
     "lodash": "^4.17.15",

@@ -1,11 +1,9 @@
 import { applyMiddleware, createStore } from 'redux';
-
-import { routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import { createRootReducer } from 'store/create-root-reducer';
 
-export const configureStore = history => {
-  const store = createStore(createRootReducer(history), applyMiddleware(routerMiddleware(history), thunk));
+export const configureStore = () => {
+  const store = createStore(createRootReducer(), applyMiddleware(thunk));
 
   /* istanbul ignore next */
   // This is ignored during testing because there is

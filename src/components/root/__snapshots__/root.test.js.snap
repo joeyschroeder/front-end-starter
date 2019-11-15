@@ -12,38 +12,7 @@ exports[`<Root /> should render correctly 1`] = `
     }
   }
 >
-  <Memo(Connect(ConnectedRouterWithContext))
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "canGo": [Function],
-        "createHref": [Function],
-        "entries": Array [
-          Object {
-            "hash": "",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-        ],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "index": 0,
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-  >
+  <BrowserRouter>
     <Main>
       <Route
         component={[Function]}
@@ -64,6 +33,6 @@ exports[`<Root /> should render correctly 1`] = `
         path="/redux"
       />
     </Main>
-  </Memo(Connect(ConnectedRouterWithContext))>
+  </BrowserRouter>
 </Provider>
 `;
