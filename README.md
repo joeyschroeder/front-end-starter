@@ -333,7 +333,6 @@ The following are the dependencies in `package.json` separated into the categori
 
 ### Testing
 
-- babel-core // this is necessary as a bridge until babel-jest supports Babel 7
 - babel-jest
 - enzyme
 - enzyme-adapter-react-16
