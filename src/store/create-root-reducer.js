@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import { sampleReducer } from './sample/sample';
+import { sampleReducer, REDUCER_PREFIX as SAMPLE } from './sample/sample';
 
 export const createRootReducer = () =>
   combineReducers({
-    sample: sampleReducer
+    [SAMPLE]: sampleReducer
   });
