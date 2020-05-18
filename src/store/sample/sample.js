@@ -25,6 +25,7 @@ export const sampleReducer = handleActions(
 
 // Selectors
 export const selectSample = (state = {}) => state.sample || {};
-export const selectSampleValue = state => selectSample(state).sampleValue || DEFAULT_STATE.sampleValue;
+export const selectSampleValue = state =>
+  selectSample(state).sampleValue || DEFAULT_STATE.sampleValue;
 
 // Thunks

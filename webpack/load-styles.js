@@ -39,11 +39,19 @@ export const loadStyles = ({ production = false }) => {
       rules: [
         {
           test: /\.css$/,
-          use: [production ? MiniCssExtractPlugin.loader : 'style-loader', cssLoader]
+          use: [
+            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            cssLoader
+          ]
         },
         {
           test: /\.scss$/,
-          use: [production ? MiniCssExtractPlugin.loader : 'style-loader', cssModulesLoader, postCssLoader, sassLoader]
+          use: [
+            production ? MiniCssExtractPlugin.loader : 'style-loader',
+            cssModulesLoader,
+            postCssLoader,
+            sassLoader
+          ]
         }
       ]
     },

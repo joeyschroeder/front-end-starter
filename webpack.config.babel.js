@@ -77,8 +77,15 @@ const optimizationConfig = {
 
 const commonConfig = merge([
   entryConfig,
-  getHtml({ title: 'React Redux SCSS Webpack Starter', template: path.join(ROOT_PATHS.src, 'index.html') }),
-  loadJs({ include: ROOT_PATHS.src, exclude: '/node_modules/', options: { cacheDirectory: true } })
+  getHtml({
+    title: 'React Redux SCSS Webpack Starter',
+    template: path.join(ROOT_PATHS.src, 'index.html')
+  }),
+  loadJs({
+    include: ROOT_PATHS.src,
+    exclude: '/node_modules/',
+    options: { cacheDirectory: true }
+  })
 ]);
 
 const productionConfig = merge([

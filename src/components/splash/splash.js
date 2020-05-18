@@ -10,9 +10,10 @@ export const Splash = () => {
           <strong>Front-End</strong> Starter
         </h1>
         <p>
-          This project is designed to get you up and running with your next front-end, JavaScript application faster
-          than ever! This project includes <strong>React</strong>, <strong>Redux</strong>, and many other utilities for
-          easily maintaining a front-end application.
+          This project is designed to get you up and running with your next
+          front-end, JavaScript application faster than ever! This project
+          includes <strong>React</strong>, <strong>Redux</strong>, and many
+          other utilities for easily maintaining a front-end application.
         </p>
       </div>
     </Screen>

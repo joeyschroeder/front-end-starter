@@ -1,4 +1,8 @@
-import { resetSampleValue, selectSampleValue, updateSampleValue } from 'store/sample/sample';
+import {
+  resetSampleValue,
+  selectSampleValue,
+  updateSampleValue
+} from 'store/sample/sample';
 
 import { connect } from 'react-redux';
 import { ReduxView } from './redux-view';
@@ -12,4 +16,7 @@ const mapDispatchToProps = {
   reset: resetSampleValue
 };
 
-export const ReduxViewConnected = connect(mapStateToProps, mapDispatchToProps)(ReduxView);
+export const ReduxViewConnected = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReduxView);

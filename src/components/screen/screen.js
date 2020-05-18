@@ -7,7 +7,10 @@ import styles from './screen.style.scss';
 export class Screen extends Component {
   static propTypes = {
     centerContent: PropTypes.bool,
-    children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ]),
     className: PropTypes.string
   };
 
@@ -20,7 +23,9 @@ export class Screen extends Component {
   getClassNames() {
     const { centerContent, className } = this.props;
 
-    const result = classNames('animated', 'fadeIn', className, styles.root, { [styles.centerContent]: centerContent });
+    const result = classNames('animated', 'fadeIn', className, styles.root, {
+      [styles.centerContent]: centerContent
+    });
 
     return result;
   }

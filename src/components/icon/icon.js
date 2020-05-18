@@ -17,7 +17,9 @@ export class Icon extends Component {
   getClassName() {
     const { className, name } = this.props;
 
-    const result = classNames('fa', 'fa-fw', className, { [`fa-${name}`]: name });
+    const result = classNames('fa', 'fa-fw', className, {
+      [`fa-${name}`]: name
+    });
 
     return result;
   }

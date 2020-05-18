@@ -11,6 +11,9 @@ export const devServer = ({ host, port }) => {
       port,
       stats: 'errors-only'
     },
-    plugins: [new webpack.WatchIgnorePlugin([path.join(__dirname, 'node_modules')]), new webpack.NamedModulesPlugin()]
+    plugins: [
+      new webpack.WatchIgnorePlugin([path.join(__dirname, 'node_modules')]),
+      new webpack.NamedModulesPlugin()
+    ]
   };
 };

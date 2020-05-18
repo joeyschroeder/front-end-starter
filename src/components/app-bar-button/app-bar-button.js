@@ -21,7 +21,10 @@ export const AppBarButton = props => {
 };
 
 AppBarButton.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   onClick: PropTypes.func,
   to: PropTypes.string
 };

@@ -1,4 +1,8 @@
-import { resetSampleValue, selectSampleValue, updateSampleValue } from './sample';
+import {
+  resetSampleValue,
+  selectSampleValue,
+  updateSampleValue
+} from './sample';
 
 import { createRootReducer } from '../create-root-reducer';
 
@@ -17,7 +21,10 @@ describe('sampleReducer', () => {
   describe('resetSampleValue', () => {
     it('should reset to state.sample.sampleValue to 0', () => {
       const action = resetSampleValue();
-      const state = createRootReducer()({ sample: { sampleValue: 10 } }, action);
+      const state = createRootReducer()(
+        { sample: { sampleValue: 10 } },
+        action
+      );
       const result = selectSampleValue(state);
 
       expect(result).toEqual(0);
