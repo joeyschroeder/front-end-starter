@@ -12,7 +12,4 @@ const mapDispatchToProps = {
   reset: resetSampleValue
 };
 
-export const ReduxViewConnected = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ReduxView);
+export const ReduxViewConnected = connect(mapStateToProps, mapDispatchToProps)(ReduxView);

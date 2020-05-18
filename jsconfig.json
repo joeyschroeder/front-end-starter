@@ -12,9 +12,5 @@
     },
     "target": "es6"
   },
-  "exclude": [
-    "coverage",
-    "dist",
-    "node_modules"
-  ]
+  "exclude": ["coverage", "dist", "node_modules"]
 }
