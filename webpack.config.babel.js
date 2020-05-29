@@ -9,7 +9,6 @@ import { loadFonts } from './webpack/load-fonts';
 import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
-import { getFavicons } from './webpack/get-favicons';
 import { copyFiles } from './webpack/copy-files';
 
 const ROOT_PATHS = {
@@ -25,7 +24,7 @@ const outputConfig = {
   output: {
     filename: '[name]-[hash].js',
     path: ROOT_PATHS.dist,
-    publicPath: '/',
+    publicPath: './',
   },
 };
 
@@ -64,17 +63,14 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
+  outputConfig,
   copyFiles({
     from: path.join(ROOT_PATHS.src, 'assets/images/public'),
     to: path.join(ROOT_PATHS.dist, 'public'),
   }),
-  outputConfig,
   optimizationConfig,
   loadStyles({ production: true }),
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
-  getFavicons({
-    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
-  }),
+  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
   commonConfig,
   STATS_CONFIG,
 ]);
@@ -84,7 +80,7 @@ const developmentConfig = merge([
   devServer({ host: 'localhost', port: 9090 }),
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
-  loadStyles({}),
+  loadStyles(),
   { output: { publicPath: '/' } },
 ]);
 
