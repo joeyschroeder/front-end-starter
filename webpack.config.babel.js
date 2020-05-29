@@ -10,6 +10,7 @@ import { loadFonts } from './webpack/load-fonts';
 import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
+import { getFavicons } from './webpack/get-favicons';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'dist'),
@@ -57,12 +58,15 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
-  clean(ROOT_PATHS.dist),
-  commonConfig,
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
-  loadStyles({ production: true }),
-  optimizationConfig,
   outputConfig,
+  optimizationConfig,
+  loadStyles({ production: true }),
+  loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
+  getFavicons({
+    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png')
+  }),
+  commonConfig,
+  clean(ROOT_PATHS.dist),
   STATS_CONFIG
 ]);
 
