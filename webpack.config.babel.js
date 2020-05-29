@@ -52,10 +52,10 @@ const commonConfig = merge([
     templateParameters: {
       description:
         'A front-end starter application including React, Redux, Webpack and more!',
-      url: 'https://www.joeyschroeder.com',
+      url: 'https://joeyschroeder.github.io/front-end-starter',
       siteName: 'Front-End Starter'
     },
-    title: 'Front-End Starter | by Joey Schroeder'
+    title: 'Front-End Starter | Joey Schroeder'
   }),
   loadJs({
     include: ROOT_PATHS.src,
