@@ -2,7 +2,6 @@ import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import merge from 'webpack-merge';
 import path from 'path';
-import { clean } from './webpack/clean';
 import { devServer } from './webpack/dev-server';
 import { getHtml } from './webpack/get-html';
 import { getSourcemaps } from './webpack/get-sourcemaps';
@@ -77,7 +76,6 @@ const productionConfig = merge([
     sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png')
   }),
   commonConfig,
-  clean(ROOT_PATHS.dist),
   STATS_CONFIG
 ]);
 
