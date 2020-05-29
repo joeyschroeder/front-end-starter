@@ -9,43 +9,11 @@ import { getSourcemaps } from './webpack/get-sourcemaps';
 import { loadFonts } from './webpack/load-fonts';
 import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
+import { STATS_CONFIG } from './webpack/stats-config';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'dist'),
   src: path.join(__dirname, 'src')
-};
-
-const statConfig = {
-  stats: {
-    all: undefined,
-    assets: true,
-    builtAt: true,
-    cached: false,
-    cachedAssets: false,
-    children: false,
-    chunkGroups: false,
-    chunkModules: false,
-    chunkOrigins: false,
-    chunks: false,
-    colors: true,
-    depth: false,
-    entrypoints: false,
-    env: true,
-    errorDetails: true,
-    errors: true,
-    hash: true,
-    maxModules: 15,
-    modules: false,
-    performance: true,
-    providedExports: false,
-    publicPath: true,
-    reasons: true,
-    source: false,
-    timings: true,
-    usedExports: false,
-    version: true,
-    warnings: false
-  }
 };
 
 const entryConfig = {
@@ -95,7 +63,7 @@ const productionConfig = merge([
   loadStyles({ production: true }),
   optimizationConfig,
   outputConfig,
-  statConfig
+  STATS_CONFIG
 ]);
 
 const developmentConfig = merge([
