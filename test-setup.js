@@ -14,4 +14,4 @@ global.create = create;
 global.React = React;
 
 // This is used to prevent _.uniqueId() from generating new unique IDs that may conflict with Jest snapshots.
-_.uniqueId = value => value;
+_.uniqueId = (value) => value;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './block-button.style.scss';
 
-export const BlockButton = props => {
+export const BlockButton = (props) => {
   const { children, onClick } = props;
 
   return (
@@ -15,12 +15,12 @@ export const BlockButton = props => {
 BlockButton.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 BlockButton.defaultProps = {
   children: null,
-  onClick: null
+  onClick: null,
 };

@@ -1,6 +1,6 @@
-@import '../config/variables';
-@import '../mixins/line-height';
-@import '../mixins/font-size';
+@import "../config/variables";
+@import "../mixins/line-height";
+@import "../mixins/font-size";
 
 body {
   @include font-size($font-size-base);

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 
-export const Main = props => {
+export const Main = (props) => {
   const { children } = props;
 
   return (
@@ -28,10 +28,10 @@ export const Main = props => {
 Main.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
+    PropTypes.node,
+  ]),
 };
 
 Main.defaultProps = {
-  children: null
+  children: null,
 };

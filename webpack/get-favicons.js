@@ -19,10 +19,10 @@ export const getFavicons = ({ sourcePath }) => {
             favicons: true,
             firefox: false,
             windows: false,
-            yandex: false
-          }
-        }
-      })
-    ]
+            yandex: false,
+          },
+        },
+      }),
+    ],
   };
 };

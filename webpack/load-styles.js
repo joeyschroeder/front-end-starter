@@ -6,8 +6,8 @@ export const loadStyles = ({ production = false }) => {
     loader: 'css-loader',
     options: {
       modules: false,
-      sourceMap: false
-    }
+      sourceMap: false,
+    },
   };
 
   const cssModulesLoader = {
@@ -15,23 +15,23 @@ export const loadStyles = ({ production = false }) => {
     options: {
       importLoaders: 2,
       modules: true,
-      sourceMap: !production
-    }
+      sourceMap: !production,
+    },
   };
 
   const postCssLoader = {
     loader: 'postcss-loader',
     options: {
       plugins: [Autoprefixer],
-      sourceMap: !production
-    }
+      sourceMap: !production,
+    },
   };
 
   const sassLoader = {
     loader: 'sass-loader',
     options: {
-      sourceMap: !production
-    }
+      sourceMap: !production,
+    },
   };
 
   return {
@@ -41,8 +41,8 @@ export const loadStyles = ({ production = false }) => {
           test: /\.css$/,
           use: [
             production ? MiniCssExtractPlugin.loader : 'style-loader',
-            cssLoader
-          ]
+            cssLoader,
+          ],
         },
         {
           test: /\.scss$/,
@@ -50,16 +50,16 @@ export const loadStyles = ({ production = false }) => {
             production ? MiniCssExtractPlugin.loader : 'style-loader',
             cssModulesLoader,
             postCssLoader,
-            sassLoader
-          ]
-        }
-      ]
+            sassLoader,
+          ],
+        },
+      ],
     },
     plugins: [
       new MiniCssExtractPlugin({
         filename: '[name]-[hash].css',
-        chunkFilename: '[id]-[hash].css'
-      })
-    ]
+        chunkFilename: '[id]-[hash].css',
+      }),
+    ],
   };
 };

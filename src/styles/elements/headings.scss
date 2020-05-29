@@ -1,6 +1,6 @@
-@import '../config/variables';
-@import '../mixins/line-height';
-@import '../mixins/font-size';
+@import "../config/variables";
+@import "../mixins/line-height";
+@import "../mixins/font-size";
 
 h1 {
   @include font-size(3);

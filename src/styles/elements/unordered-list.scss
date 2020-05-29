@@ -1,4 +1,4 @@
-@import '../config/variables';
+@import "../config/variables";
 
 ul {
   list-style: none;
@@ -19,7 +19,7 @@ ul {
 
     &::before {
       color: $color-secondary;
-      content: '•';
+      content: "•";
       left: -$spacer * 1.5;
       position: absolute;
     }

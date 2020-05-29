@@ -1,5 +1,9 @@
 {
-  "collectCoverageFrom": ["src/**/*.js", "!src/index.js", "!src/**/*.connected.js"],
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "!src/index.js",
+    "!src/**/*.connected.js"
+  ],
   "coverageReporters": ["lcov", "text-summary"],
   "moduleNameMapper": {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"

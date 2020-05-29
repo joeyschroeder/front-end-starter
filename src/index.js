@@ -6,7 +6,7 @@ import { Root } from './components/root/root';
 
 const store = configureStore();
 
-const init = Component =>
+const init = (Component) =>
   render(
     <AppContainer>
       <Component store={store} />

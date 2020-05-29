@@ -14,19 +14,19 @@ import { copyFiles } from './webpack/copy-files';
 
 const ROOT_PATHS = {
   dist: path.join(__dirname, 'docs'),
-  src: path.join(__dirname, 'src')
+  src: path.join(__dirname, 'src'),
 };
 
 const entryConfig = {
-  entry: path.join(ROOT_PATHS.src, 'index.js')
+  entry: path.join(ROOT_PATHS.src, 'index.js'),
 };
 
 const outputConfig = {
   output: {
     filename: '[name]-[hash].js',
     path: ROOT_PATHS.dist,
-    publicPath: '/'
-  }
+    publicPath: '/',
+  },
 };
 
 const optimizationConfig = {
@@ -37,11 +37,11 @@ const optimizationConfig = {
         commons: {
           chunks: 'initial',
           name: 'vendor',
-          test: /[\\/]node_modules[\\/]/
-        }
-      }
-    }
-  }
+          test: /[\\/]node_modules[\\/]/,
+        },
+      },
+    },
+  },
 };
 
 const commonConfig = merge([
@@ -52,31 +52,31 @@ const commonConfig = merge([
       description:
         'A front-end starter application including React, Redux, Webpack and more!',
       url: 'https://joeyschroeder.github.io/front-end-starter',
-      siteName: 'Front-End Starter'
+      siteName: 'Front-End Starter',
     },
-    title: 'Front-End Starter | Joey Schroeder'
+    title: 'Front-End Starter | Joey Schroeder',
   }),
   loadJs({
     include: ROOT_PATHS.src,
     exclude: '/node_modules/',
-    options: { cacheDirectory: true }
-  })
+    options: { cacheDirectory: true },
+  }),
 ]);
 
 const productionConfig = merge([
   copyFiles({
     from: path.join(ROOT_PATHS.src, 'assets/images/public'),
-    to: path.join(ROOT_PATHS.dist, 'public')
+    to: path.join(ROOT_PATHS.dist, 'public'),
   }),
   outputConfig,
   optimizationConfig,
   loadStyles({ production: true }),
   loadFonts({ options: { limit: 5000, name: 'fonts/[name]-[hash].[ext]' } }),
   getFavicons({
-    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png')
+    sourcePath: path.join(ROOT_PATHS.src, 'assets/images/favicon.png'),
   }),
   commonConfig,
-  STATS_CONFIG
+  STATS_CONFIG,
 ]);
 
 const developmentConfig = merge([
@@ -85,10 +85,10 @@ const developmentConfig = merge([
   getSourcemaps({ type: 'cheap-module-eval-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
   loadStyles({}),
-  { output: { publicPath: '/' } }
+  { output: { publicPath: '/' } },
 ]);
 
-export default mode => {
+export default (mode) => {
   process.env.BABEL_ENV = mode;
 
   if (mode === 'production') return merge(productionConfig, { mode });

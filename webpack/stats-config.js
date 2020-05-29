@@ -27,6 +27,6 @@ export const STATS_CONFIG = {
     timings: true,
     usedExports: false,
     version: true,
-    warnings: false
-  }
+    warnings: false,
+  },
 };

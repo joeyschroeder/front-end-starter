@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './app-bar-button.style.scss';
 
-export const AppBarButton = props => {
+export const AppBarButton = (props) => {
   const { children, onClick, to } = props;
 
   if (to)
@@ -23,14 +23,14 @@ export const AppBarButton = props => {
 AppBarButton.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   onClick: PropTypes.func,
-  to: PropTypes.string
+  to: PropTypes.string,
 };
 
 AppBarButton.defaultProps = {
   children: null,
   onClick: null,
-  to: ''
+  to: '',
 };

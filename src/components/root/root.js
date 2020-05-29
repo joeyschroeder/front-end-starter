@@ -7,7 +7,7 @@ import { ReduxViewConnected } from 'components/redux-view/redux-view.connected';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Splash } from 'components/splash/splash';
 
-export const Root = props => {
+export const Root = (props) => {
   const { store } = props;
 
   return (
@@ -23,9 +23,9 @@ export const Root = props => {
 };
 
 Root.propTypes = {
-  store: PropTypes.object
+  store: PropTypes.object,
 };
 
 Root.defaultProps = {
-  store: null
+  store: null,
 };

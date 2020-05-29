@@ -1,7 +1,7 @@
-@import '../config/variables';
-@import '../mixins/font-size';
-@import '../mixins/line-height';
-@import '../mixins/transition';
+@import "../config/variables";
+@import "../mixins/font-size";
+@import "../mixins/line-height";
+@import "../mixins/transition";
 
 input {
   @include transition(border-color);

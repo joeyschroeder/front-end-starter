@@ -4,7 +4,7 @@ import React from 'react';
 import { Screen } from 'components/screen/screen';
 import styles from './redux-view.style.scss';
 
-export const ReduxView = props => {
+export const ReduxView = (props) => {
   const { reset, update, value } = props;
 
   return (
@@ -41,11 +41,11 @@ export const ReduxView = props => {
 ReduxView.propTypes = {
   reset: PropTypes.func,
   update: PropTypes.func,
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 ReduxView.defaultProps = {
   reset: () => {},
   update: () => {},
-  value: 0
+  value: 0,
 };

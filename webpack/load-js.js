@@ -7,9 +7,9 @@ export const loadJs = ({ include, exclude, options } = {}) => {
           include,
           loader: 'babel-loader',
           options,
-          test: /\.js$/
-        }
-      ]
-    }
+          test: /\.js$/,
+        },
+      ],
+    },
   };
 };

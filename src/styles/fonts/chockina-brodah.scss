@@ -1,65 +1,65 @@
-$src: $font-path + 'chockina-brodah/';
-$font-family: 'Chockina Brodah';
+$src: $font-path + "chockina-brodah/";
+$font-family: "Chockina Brodah";
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--regular.otf') format('opentype');
+  src: url($src + "chockina-brodah--regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--regular-italic.otf') format('opentype');
+  src: url($src + "chockina-brodah--regular-italic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--bold.otf') format('opentype');
+  src: url($src + "chockina-brodah--bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--bold-italic.otf') format('opentype');
+  src: url($src + "chockina-brodah--bold-italic.otf") format("opentype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--semibold.otf') format('opentype');
+  src: url($src + "chockina-brodah--semibold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--semibold-italic.otf') format('opentype');
+  src: url($src + "chockina-brodah--semibold-italic.otf") format("opentype");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--light.otf') format('opentype');
+  src: url($src + "chockina-brodah--light.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--light-italic.otf') format('opentype');
+  src: url($src + "chockina-brodah--light-italic.otf") format("opentype");
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
   font-family: $font-family;
-  src: url($src + 'chockina-brodah--black.otf') format('opentype');
+  src: url($src + "chockina-brodah--black.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }

@@ -12,19 +12,19 @@ export class App extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ])
+      PropTypes.node,
+    ]),
   };
 
   static defaultProps = {
-    children: null
+    children: null,
   };
 
   componentDidMount() {
     // When the app.js component mounts it fires an event called 'appReady'
     const event = new CustomEvent('appReady', {
       bubbles: true,
-      cancelable: false
+      cancelable: false,
     });
 
     document.dispatchEvent(event);

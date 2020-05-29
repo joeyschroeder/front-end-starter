@@ -4,8 +4,8 @@ export const copyFiles = ({ from, to } = {}) => {
   return {
     plugins: [
       new CopyPlugin({
-        patterns: [{ from, to }]
-      })
-    ]
+        patterns: [{ from, to }],
+      }),
+    ],
   };
 };

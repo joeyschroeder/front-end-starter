@@ -1,8 +1,8 @@
-@import '../../styles/config/variables';
-@import '../../styles/mixins/transition';
+@import "../../styles/config/variables";
+@import "../../styles/mixins/transition";
 
 .root {
-  @include transition(#{'background, transform'});
+  @include transition(#{"background, transform"});
 
   background: $color-primary;
   border-radius: $border-radius;

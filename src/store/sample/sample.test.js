@@ -1,7 +1,7 @@
 import {
   resetSampleValue,
   selectSampleValue,
-  updateSampleValue
+  updateSampleValue,
 } from './sample';
 
 import { createRootReducer } from '../create-root-reducer';

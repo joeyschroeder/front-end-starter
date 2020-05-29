@@ -1,4 +1,4 @@
-@import '../config/variables';
+@import "../config/variables";
 
 @mixin transition($transitionProperty, $transitionDuration: $duration-base) {
   transition-duration: $transitionDuration;

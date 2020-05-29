@@ -1,4 +1,4 @@
-@import '../config/variables';
+@import "../config/variables";
 
 ol {
   list-style: none;
@@ -20,7 +20,7 @@ ol {
 
     &::before {
       color: $color-primary;
-      content: counter(step-counter) '.';
+      content: counter(step-counter) ".";
       font-weight: $font-weight-bold;
       position: absolute;
       text-align: right;

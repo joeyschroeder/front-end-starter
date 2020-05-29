@@ -9,22 +9,22 @@ export class Screen extends Component {
     centerContent: PropTypes.bool,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
+      PropTypes.node,
     ]),
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   static defaultProps = {
     centerContent: false,
     children: null,
-    className: ''
+    className: '',
   };
 
   getClassNames() {
     const { centerContent, className } = this.props;
 
     const result = classNames('animated', 'fadeIn', className, styles.root, {
-      [styles.centerContent]: centerContent
+      [styles.centerContent]: centerContent,
     });
 
     return result;
