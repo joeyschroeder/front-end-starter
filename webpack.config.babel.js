@@ -11,9 +11,10 @@ import { loadJs } from './webpack/load-js';
 import { loadStyles } from './webpack/load-styles';
 import { STATS_CONFIG } from './webpack/stats-config';
 import { getFavicons } from './webpack/get-favicons';
+import { copyFiles } from './webpack/copy-files';
 
 const ROOT_PATHS = {
-  dist: path.join(__dirname, 'dist'),
+  dist: path.join(__dirname, 'docs'),
   src: path.join(__dirname, 'src')
 };
 
@@ -47,8 +48,14 @@ const optimizationConfig = {
 const commonConfig = merge([
   entryConfig,
   getHtml({
-    title: 'React Redux SCSS Webpack Starter',
-    template: path.join(ROOT_PATHS.src, 'index.html')
+    template: path.join(ROOT_PATHS.src, 'templates/main.ejs'),
+    templateParameters: {
+      description:
+        'A front-end starter application including React, Redux, Webpack and more!',
+      url: 'https://www.joeyschroeder.com',
+      siteName: 'Front-End Starter'
+    },
+    title: 'Front-End Starter | by Joey Schroeder'
   }),
   loadJs({
     include: ROOT_PATHS.src,
@@ -58,6 +65,10 @@ const commonConfig = merge([
 ]);
 
 const productionConfig = merge([
+  copyFiles({
+    from: path.join(ROOT_PATHS.src, 'assets/images/public'),
+    to: path.join(ROOT_PATHS.dist, 'public')
+  }),
   outputConfig,
   optimizationConfig,
   loadStyles({ production: true }),

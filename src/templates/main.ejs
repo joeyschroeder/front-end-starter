@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport"  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="description" content="<%= description %>" />
+
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:image" content="<%= url %>/public/open-graph.png">
+  <meta property="og:site_name" content="<%= siteName %>" />
+  <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= url %>" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:description" content="<%= description %>" />
+  <meta property="twitter:image" content="<%= url %>/public/open-graph.png" />
+  <meta property="twitter:title" content="<%= siteName %>" />
+  <meta property="twitter:url" content="<%= url %>" />
+
+  <link rel="canonical" href="<%= url %>" />
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="pre-bootstrap-container">
+    <script type="text/javascript">
+      const appReadyClass = 'app-ready';
+      const body = document.getElementsByTagName('body')[0];
+      const inlinedStyles = document.getElementsByTagName('style')[0];
+      const preBootstrapContainer = document.getElementById('pre-bootstrap-container');
+      const handleAppReady = event => {
+        setTimeout(() => {
+          body.className = appReadyClass; // add app-ready class after timeout to trigger animations
+        }, 100);
+        setTimeout(() => {
+          preBootstrapContainer.remove(); // remove pre bootstrap content;
+          if (inlinedStyles) inlinedStyles.remove(); // remove inlined styles so they don't conflict;
+        }, 900);
+      }
+      // Listen for the "appReady" event, which will be emitted by the app.js when component mounts
+      // and bubble up (as far as we know) to the document root.
+      document.addEventListener('appReady', handleAppReady);
+    </script>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</body>
+
+</html>
