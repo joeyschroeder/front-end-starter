@@ -12,7 +12,9 @@ exports[`<Root /> should render correctly 1`] = `
     }
   }
 >
-  <BrowserRouter>
+  <BrowserRouter
+    basename=""
+  >
     <Main>
       <Route
         component={[Function]}
