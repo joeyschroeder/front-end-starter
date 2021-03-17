@@ -1,7 +1,7 @@
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import merge from 'webpack-merge';
 import path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
 import { devServer } from './webpack/dev-server';
 import { getHtml } from './webpack/get-html';
 import { getSourcemaps } from './webpack/get-sourcemaps';
@@ -22,7 +22,7 @@ const entryConfig = {
 
 const outputConfig = {
   output: {
-    filename: '[name]-[hash].js',
+    filename: '[name]-[contenthash].js',
     path: ROOT_PATHS.dist,
     publicPath: './',
   },
@@ -30,7 +30,7 @@ const outputConfig = {
 
 const optimizationConfig = {
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin(), new UglifyJsPlugin()],
+    minimizer: [new OptimizeCSSAssetsPlugin(), new TerserPlugin()],
     splitChunks: {
       cacheGroups: {
         commons: {
@@ -78,15 +78,20 @@ const productionConfig = merge([
 const developmentConfig = merge([
   commonConfig,
   devServer({ host: 'localhost', port: 9090 }),
-  getSourcemaps({ type: 'cheap-module-eval-source-map' }),
+  getSourcemaps({ type: 'eval-cheap-module-source-map' }),
   loadFonts({ options: { name: '[name].[ext]' } }),
   loadStyles(),
   { output: { publicPath: '/' } },
 ]);
 
-export default (mode) => {
+export default ({ production = false, development = false } = {}) => {
+  let mode = 'none';
+
+  if (development) mode = 'development';
+  if (production) mode = 'production';
+
   process.env.BABEL_ENV = mode;
 
-  if (mode === 'production') return merge(productionConfig, { mode });
+  if (production) return merge(productionConfig, { mode });
   return merge(developmentConfig, { mode });
 };

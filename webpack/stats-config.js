@@ -17,7 +17,6 @@ export const STATS_CONFIG = {
     errorDetails: true,
     errors: true,
     hash: true,
-    maxModules: 15,
     modules: false,
     performance: true,
     providedExports: false,

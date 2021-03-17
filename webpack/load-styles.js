@@ -1,4 +1,3 @@
-import Autoprefixer from 'autoprefixer';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export const loadStyles = ({ production = false } = {}) => {
@@ -22,7 +21,9 @@ export const loadStyles = ({ production = false } = {}) => {
   const postCssLoader = {
     loader: 'postcss-loader',
     options: {
-      plugins: [Autoprefixer],
+      postcssOptions: {
+        plugins: ['autoprefixer'],
+      },
       sourceMap: !production,
     },
   };
@@ -57,8 +58,8 @@ export const loadStyles = ({ production = false } = {}) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: '[name]-[hash].css',
-        chunkFilename: '[id]-[hash].css',
+        filename: '[name]-[contenthash].css',
+        chunkFilename: '[id]-[contenthash].css',
       }),
     ],
   };
