@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 
-export const Main = (props) => {
+export function Main(props) {
   const { children } = props;
 
   return (
@@ -23,7 +23,7 @@ export const Main = (props) => {
       {children}
     </App>
   );
-};
+}
 
 Main.propTypes = {
   children: PropTypes.oneOfType([

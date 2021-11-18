@@ -2,7 +2,7 @@ import React from 'react';
 import { Screen } from 'components/screen/screen';
 import styles from './splash.style.scss';
 
-export const Splash = () => {
+export function Splash() {
   return (
     <Screen centerContent className={styles.root}>
       <div className={styles.primary}>
@@ -18,4 +18,4 @@ export const Splash = () => {
       </div>
     </Screen>
   );
-};
+}

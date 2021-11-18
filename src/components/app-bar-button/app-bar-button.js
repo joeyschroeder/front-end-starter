@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './app-bar-button.style.scss';
 
-export const AppBarButton = (props) => {
+export function AppBarButton(props) {
   const { children, onClick, to } = props;
 
   if (to)
@@ -18,7 +18,7 @@ export const AppBarButton = (props) => {
       {children}
     </button>
   );
-};
+}
 
 AppBarButton.propTypes = {
   children: PropTypes.oneOfType([

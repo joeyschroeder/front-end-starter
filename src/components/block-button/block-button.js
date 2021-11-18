@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './block-button.style.scss';
 
-export const BlockButton = (props) => {
+export function BlockButton(props) {
   const { children, onClick } = props;
 
   return (
@@ -10,7 +10,7 @@ export const BlockButton = (props) => {
       {children}
     </button>
   );
-};
+}
 
 BlockButton.propTypes = {
   children: PropTypes.oneOfType([

@@ -4,7 +4,7 @@ import React from 'react';
 import { Screen } from 'components/screen/screen';
 import styles from './redux-view.style.scss';
 
-export const ReduxView = (props) => {
+export function ReduxView(props) {
   const { reset, update, value } = props;
 
   return (
@@ -36,7 +36,7 @@ export const ReduxView = (props) => {
       <BlockButton onClick={reset}>Reset</BlockButton>
     </Screen>
   );
-};
+}
 
 ReduxView.propTypes = {
   reset: PropTypes.func,
