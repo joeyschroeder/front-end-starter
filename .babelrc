@@ -1,7 +1,5 @@
 {
-  "presets": [
-    "babel-preset-joey"
-  ],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
     ["module-resolver", {
       "alias": {
@@ -22,8 +20,7 @@
     },
     "production": {
       "plugins": [
-        "lodash",
-        "transform-react-pure-class-to-function"
+        "lodash"
       ]
     }
   }
