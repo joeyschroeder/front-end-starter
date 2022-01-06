@@ -2,13 +2,11 @@ import { App } from 'components/app/app';
 import { AppBar } from 'components/app-bar/app-bar';
 import { AppBarButton } from 'components/app-bar-button/app-bar-button';
 import { Icon } from 'components/icon/icon';
-import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 
-export function Main(props) {
-  const { children } = props;
-
+export function Main() {
   return (
     <App>
       <AppBar>
@@ -18,20 +16,11 @@ export function Main(props) {
         <AppBarButton to={ROUTES.REDUX}>
           <Icon name="database" />
         </AppBarButton>
-        {/* <AppBarButton to={ROUTES.HOT_RELOAD}><Icon name='fire' /></AppBarButton> */}
+        {/* <AppBarButton to={ROUTES.HOT_RELOAD}>
+          <Icon name="fire" />
+        </AppBarButton> */}
       </AppBar>
-      {children}
+      <Outlet />
     </App>
   );
 }
-
-Main.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-};
-
-Main.defaultProps = {
-  children: null,
-};

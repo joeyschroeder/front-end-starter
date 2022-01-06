@@ -13,6 +13,11 @@ export const devServer = ({ host, port }) => {
       port,
       stats: 'errors-only',
     },
+    resolve: {
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+      },
+    },
     plugins: [
       new WatchIgnorePlugin({ paths: [path.join(__dirname, 'node_modules')] }),
       new ProvidePlugin({

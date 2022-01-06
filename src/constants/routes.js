@@ -1,4 +1,4 @@
 export const ROUTES = {
   SPLASH: '/',
-  REDUX: '/redux',
+  REDUX: 'redux',
 };

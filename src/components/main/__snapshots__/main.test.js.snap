@@ -14,7 +14,7 @@ exports[`<Main /> should render correctly 1`] = `
     </AppBarButton>
     <AppBarButton
       onClick={null}
-      to="/redux"
+      to="redux"
     >
       <Icon
         className=""
@@ -22,5 +22,6 @@ exports[`<Main /> should render correctly 1`] = `
       />
     </AppBarButton>
   </AppBar>
+  <Outlet />
 </App>
 `;

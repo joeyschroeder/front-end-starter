@@ -1,19 +1,14 @@
 import ShallowRenderer from 'react-test-renderer/shallow';
 import { configureStore } from 'util/configure-store/configure-store';
-import { createMemoryHistory } from 'history';
 import { Root } from './root';
 /* global React */
 
 describe('<Root />', () => {
   const renderer = new ShallowRenderer();
-
-  // keyLength is set to zero so a new key is not
-  // generated during every snapshot comparison
-  const history = createMemoryHistory({ keyLength: 0 });
-  const store = configureStore(history);
+  const store = configureStore();
 
   it('should render correctly', () => {
-    renderer.render(<Root history={history} store={store} />);
+    renderer.render(<Root store={store} />);
     const result = renderer.getRenderOutput();
 
     expect(result).toMatchSnapshot();

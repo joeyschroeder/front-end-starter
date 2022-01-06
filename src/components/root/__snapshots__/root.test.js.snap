@@ -15,25 +15,21 @@ exports[`<Root /> should render correctly 1`] = `
   <BrowserRouter
     basename=""
   >
-    <Main>
+    <Routes>
       <Route
-        component={[Function]}
-        exact={true}
+        element={<Main />}
         path="/"
-      />
-      <Route
-        component={
-          Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "type": [Function],
-          }
-        }
-        exact={true}
-        path="/redux"
-      />
-    </Main>
+      >
+        <Route
+          element={<Splash />}
+          path="/"
+        />
+        <Route
+          element={<Memo(Connect(ReduxView)) />}
+          path="redux"
+        />
+      </Route>
+    </Routes>
   </BrowserRouter>
 </Provider>
 `;
