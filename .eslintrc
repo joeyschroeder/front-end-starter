@@ -9,7 +9,7 @@
     "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "plugins": ["jest", "react", "react-hooks"],
   "rules": {
     "comma-dangle": 0,
