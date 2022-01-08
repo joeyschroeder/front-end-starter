@@ -8,7 +8,7 @@
   "moduleNameMapper": {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
-  "reporters": ["jest-dot-reporter"],
+  "reporters": ["jest-progress-bar-reporter"],
   "setupFiles": ["./test-setup.js"],
   "testMatch": ["**/?(*.)+(test).js"],
   "testPathIgnorePatterns": ["<rootDir>/node_modules/"],
