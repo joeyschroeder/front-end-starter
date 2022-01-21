@@ -30,6 +30,7 @@ An application using [React](https://reactjs.org/) and [Redux](https://redux.js.
 - [Testing](#dependencies-testing)
 
 6. [Authors](#authors)
+7. [Acknowledgments](#acknowledgments)
 
 <a name="getting-started"></a>
 
@@ -247,18 +248,29 @@ The following are the dependencies in `package.json` separated into the categori
 
 ### Development
 
+- @hot-loader/react-dom
+- webpack
+- webpack-cli
+- webpack-dev-server
+
 #### Git
 
-- pre-commit // simple package to integration with git pre-commit
+- pre-commit
 
 #### Linting JavaScript
 
-- babel-eslint
+- @babel/eslint-parser
 - eslint
-- eslint-config-joey
+- eslint-config-airbnb
+- eslint-config-prettier
 - eslint-import-resolver-babel-module
+- eslint-plugin-import
+- eslint-plugin-jest
+- eslint-plugin-jsx-a11y
+- eslint-plugin-prettier
+- eslint-plugin-react"
+- eslint-plugin-react-hooks
 - prettier
-- react-hot-loader
 
 #### Linting Styles
 
@@ -267,17 +279,19 @@ The following are the dependencies in `package.json` separated into the categori
 
 #### Transpilation
 
-- @babel/cli
+- @babel/core
+- @babel/preset-env
+- @babel/preset-react
 - babel-plugin-lodash
+- babel-plugin-module-resolver
 
 #### Webpack
 
-- @babel/register // this is necessary to use the .babel.js extension on the Wepback configuration
+- buffer
 - clean-webpack-plugin
+- compression-webpack-plugin
 - path
-- webpack
-- webpack-cli
-- webpack-dev-server
+- process
 - webpack-merge
 
 ##### Fonts
@@ -287,8 +301,9 @@ The following are the dependencies in `package.json` separated into the categori
 
 ##### JavaScript
 
+- @babel/register
 - babel-loader
-- uglifyjs-webpack-plugin
+- terser-webpack-plugin
 
 ##### Styles
 
@@ -297,19 +312,21 @@ The following are the dependencies in `package.json` separated into the categori
 - mini-css-extract-plugin
 - node-sass
 - optimize-css-assets-webpack-plugin
+- postcss
 - postcss-loader
+- postcss-scss
 - sass-loader
 - style-loader
 
 ##### Templates
 
+- favicons
+- favicons-webpack-plugin
 - html-webpack-plugin
 
 <a name="dependencies-production"></a>
 
 ### Production
-
-- font-awesome
 
 #### JavaScript
 
@@ -318,7 +335,9 @@ The following are the dependencies in `package.json` separated into the categori
 - prop-types
 - react
 - react-dom
+- react-hot-loader
 - react-redux
+- react-router
 - react-router-dom
 - redux
 - redux-actions
@@ -327,6 +346,7 @@ The following are the dependencies in `package.json` separated into the categori
 #### Styles
 
 - animate.css
+- font-awesome
 - normalize.css
 
 <a name="dependencies-testing"></a>
@@ -338,9 +358,7 @@ The following are the dependencies in `package.json` separated into the categori
 - enzyme-adapter-react-16
 - identity-obj-proxy
 - jest
-- jest-dot-reporter
-- react
-- react-dom
+- jest-progress-bar-reporter
 - react-test-renderer
 
 <a name="authors"></a>
@@ -350,3 +368,9 @@ The following are the dependencies in `package.json` separated into the categori
 - **Joey Schroeder** - _Initial work_
 
 See also the list of [contributors](https://github.com/joeyschroeder/front-end-starter/contributors) who participated in this project.
+
+<a name="acknowledgments"></a>
+
+## Acknowledgments
+
+Hat tip to anyone who's code was used! 🤠
