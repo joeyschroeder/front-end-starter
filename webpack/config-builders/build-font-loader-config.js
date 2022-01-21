@@ -1,4 +1,6 @@
-export const loadFonts = ({ options } = {}) => {
+const DEFAULT_OPTIONS = { name: '[name].[ext]' };
+
+export const buildFontLoaderConfig = (options = DEFAULT_OPTIONS) => {
   return {
     module: {
       rules: [

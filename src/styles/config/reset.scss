@@ -49,6 +49,7 @@ button {
 input,
 select,
 textarea {
+  /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-appearance: none;
   background-clip: padding-box;
   border-radius: 0;

@@ -48,6 +48,7 @@ table {
       @include transition(background);
 
       &:nth-child(odd) {
+        /* stylelint-disable-next-line alpha-value-notation */
         background: rgba($color-primary-light, $disabled-opacity / 3);
       }
 

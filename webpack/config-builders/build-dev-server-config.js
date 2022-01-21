@@ -1,7 +1,12 @@
 import path from 'path';
-import { WatchIgnorePlugin, ProvidePlugin } from 'webpack';
+import { WatchIgnorePlugin } from 'webpack';
 
-export const devServer = ({ host, port }) => {
+export const buildDevServerConfig = ({
+  baseDirectory,
+  host,
+  port,
+  proxy,
+} = {}) => {
   return {
     devServer: {
       historyApiFallback: true,
@@ -11,18 +16,18 @@ export const devServer = ({ host, port }) => {
       open: false,
       overlay: true,
       port,
+      proxy,
       stats: 'errors-only',
     },
+    plugins: [
+      new WatchIgnorePlugin({
+        paths: [path.join(baseDirectory, 'node_modules')],
+      }),
+    ],
     resolve: {
       alias: {
         'react-dom': '@hot-loader/react-dom',
       },
     },
-    plugins: [
-      new WatchIgnorePlugin({ paths: [path.join(__dirname, 'node_modules')] }),
-      new ProvidePlugin({
-        process: 'process/browser',
-      }),
-    ],
   };
 };

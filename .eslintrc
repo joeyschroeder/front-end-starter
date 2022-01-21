@@ -19,6 +19,7 @@
       {
         "devDependencies": [
           "**/*.test.js",
+          "./stylelint.config.js",
           "./test-setup.js",
           "./webpack.config.babel.js",
           "./webpack/**/*.js"

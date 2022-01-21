@@ -1,87 +1,93 @@
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import merge from 'webpack-merge';
 import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
-import { devServer } from './webpack/dev-server';
-import { getHtml } from './webpack/get-html';
-import { getSourcemaps } from './webpack/get-sourcemaps';
-import { loadFonts } from './webpack/load-fonts';
-import { loadJs } from './webpack/load-js';
-import { loadStyles } from './webpack/load-styles';
-import { STATS_CONFIG } from './webpack/stats-config';
-import { copyFiles } from './webpack/copy-files';
+import { COMPRESS_ASSETS_CONFIG } from './webpack/configs/compress-assets-config';
+import { DEVELOPMENT_OUTPUT_CONFIG } from './webpack/configs/development-output-config';
+import { DEVTOOL_CONFIG } from './webpack/configs/devtool-config';
+import { JAVASCRIPT_LOADER_CONFIG } from './webpack/configs/javascript-loader-config';
+import { OPTIMIZATION_CONFIG } from './webpack/configs/optimization-config';
+import { STATS_CONFIG } from './webpack/configs/stats-config';
+import { buildCleanConfig } from './webpack/config-builders/build-clean-config';
+import { buildDevServerConfig } from './webpack/config-builders/build-dev-server-config';
+import { buildFaviconConfig } from './webpack/config-builders/build-favicon-config';
+import { buildFileLoaderConfig } from './webpack/config-builders/build-file-loader-config';
+import { buildFontLoaderConfig } from './webpack/config-builders/build-font-loader-config';
+import { buildHtmlConfig } from './webpack/config-builders/build-html-config';
+import { buildStyleLoaderConfig } from './webpack/config-builders/build-style-loader-config';
+import { POLYFILLS_CONFIG } from './webpack/configs/polyfills-config';
 
-const ROOT_PATHS = {
-  dist: path.join(__dirname, 'docs'),
-  src: path.join(__dirname, 'src'),
-};
+const baseDirectory = '';
+const devServerHost = 'localhost';
+const devServerPort = '9090';
+const outputDirectory = 'docs';
+const outputPublicPath = '';
+const title = 'Front-End Starter | Joey Schroeder';
+const siteName = 'Front-End Starter';
+const url = 'https://joeyschroeder.github.io/front-end-starter';
+const description =
+  'A front-end starter application including React, Redux, Webpack and more!';
 
-const entryConfig = {
-  entry: path.join(ROOT_PATHS.src, 'index.js'),
-};
+const entryPoint = path.join(__dirname, baseDirectory, 'src/index.js');
+const faviconPath = path.join(
+  __dirname,
+  baseDirectory,
+  'src/assets/images/public/favicon.png'
+);
+const templatePath = path.join(
+  __dirname,
+  baseDirectory,
+  'src/templates/main.ejs'
+);
 
-const outputConfig = {
+const OUTPUT_PATH = path.resolve(__dirname, outputDirectory);
+const ENTRY_CONFIG = { entry: path.resolve(__dirname, entryPoint) };
+
+const OUTPUT_CONFIG = {
   output: {
-    filename: '[name]-[contenthash].js',
-    path: ROOT_PATHS.dist,
-    publicPath: './',
+    filename: '[name].js?v=[contenthash]',
+    path: OUTPUT_PATH,
+    publicPath: outputPublicPath,
   },
 };
 
-const optimizationConfig = {
-  optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin(), new TerserPlugin()],
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          chunks: 'initial',
-          name: 'vendor',
-          test: /[\\/]node_modules[\\/]/,
-        },
-      },
-    },
-  },
-};
-
-const commonConfig = merge([
-  entryConfig,
-  getHtml({
-    template: path.join(ROOT_PATHS.src, 'templates/main.ejs'),
-    templateParameters: {
-      description:
-        'A front-end starter application including React, Redux, Webpack and more!',
-      url: 'https://joeyschroeder.github.io/front-end-starter',
-      siteName: 'Front-End Starter',
-    },
-    title: 'Front-End Starter | Joey Schroeder',
-  }),
-  loadJs({
-    include: ROOT_PATHS.src,
-    exclude: '/node_modules/',
-    options: { cacheDirectory: true },
+const COMMON_CONFIG = merge([
+  ENTRY_CONFIG,
+  JAVASCRIPT_LOADER_CONFIG,
+  POLYFILLS_CONFIG,
+  buildHtmlConfig({
+    template: templatePath,
+    templateParameters: { description, siteName, url },
+    title,
   }),
 ]);
 
-const productionConfig = merge([
-  outputConfig,
-  copyFiles({
-    from: path.join(ROOT_PATHS.src, 'assets/images/public'),
-    to: path.join(ROOT_PATHS.dist, 'public'),
+const DEVELOPMENT_CONFIG = merge([
+  COMMON_CONFIG,
+  DEVELOPMENT_OUTPUT_CONFIG,
+  DEVTOOL_CONFIG,
+  buildDevServerConfig({
+    baseDirectory,
+    host: devServerHost,
+    port: devServerPort,
   }),
-  optimizationConfig,
-  loadStyles({ production: true }),
-  loadFonts({ options: { limit: 5000, name: 'fonts/[name].[ext]' } }),
-  commonConfig,
+  buildFontLoaderConfig(),
+  buildFileLoaderConfig(),
+  buildStyleLoaderConfig(),
+]);
+
+const PRODUCTION_CONFIG = merge([
+  COMMON_CONFIG,
+  COMPRESS_ASSETS_CONFIG,
+  OPTIMIZATION_CONFIG,
+  OUTPUT_CONFIG,
   STATS_CONFIG,
-]);
-
-const developmentConfig = merge([
-  commonConfig,
-  devServer({ host: 'localhost', port: 9090 }),
-  getSourcemaps({ type: 'eval-cheap-module-source-map' }),
-  loadFonts({ options: { name: '[name].[ext]' } }),
-  loadStyles(),
-  { output: { publicPath: '/' } },
+  buildCleanConfig(OUTPUT_PATH),
+  buildFaviconConfig(faviconPath),
+  buildFontLoaderConfig({
+    limit: 2000,
+    name: '/fonts/[name].[ext]?v=[contenthash]',
+  }),
+  buildFileLoaderConfig({ limit: 500, name: '/files/[name].[ext]' }),
+  buildStyleLoaderConfig(true),
 ]);
 
 export default ({ production = false, development = false } = {}) => {
@@ -92,6 +98,6 @@ export default ({ production = false, development = false } = {}) => {
 
   process.env.BABEL_ENV = mode;
 
-  if (production) return merge(productionConfig, { mode });
-  return merge(developmentConfig, { mode });
+  if (production) return merge(PRODUCTION_CONFIG, { mode });
+  return merge(DEVELOPMENT_CONFIG, { mode });
 };

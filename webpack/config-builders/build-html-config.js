@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export const getHtml = ({ title, template, templateParameters }) => {
+export const buildHtmlConfig = ({ template, templateParameters, title }) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({

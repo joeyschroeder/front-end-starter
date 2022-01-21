@@ -1,6 +1,6 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const loadStyles = ({ production = false } = {}) => {
+export const buildStyleLoaderConfig = (production = false) => {
   const cssLoader = {
     loader: 'css-loader',
     options: {
@@ -13,8 +13,12 @@ export const loadStyles = ({ production = false } = {}) => {
     loader: 'css-loader',
     options: {
       importLoaders: 2,
-      modules: true,
-      sourceMap: !production,
+      modules: {
+        localIdentName: production
+          ? '[contenthash:base64:5]'
+          : '[name][local][contenthash:base64:5]',
+      },
+      sourceMap: false,
     },
   };
 
@@ -24,15 +28,13 @@ export const loadStyles = ({ production = false } = {}) => {
       postcssOptions: {
         plugins: ['autoprefixer'],
       },
-      sourceMap: !production,
+      sourceMap: false,
     },
   };
 
   const sassLoader = {
     loader: 'sass-loader',
-    options: {
-      sourceMap: !production,
-    },
+    options: { sourceMap: false },
   };
 
   return {
@@ -58,8 +60,8 @@ export const loadStyles = ({ production = false } = {}) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: '[name]-[contenthash].css',
-        chunkFilename: '[id]-[contenthash].css',
+        chunkFilename: '[name]-[id].css?v=[contenthash]',
+        filename: '[name].css?v=[contenthash]',
       }),
     ],
   };
