@@ -1,15 +1,13 @@
-const DEFAULT_OPTIONS = { name: '[name].[ext]' };
+const DEFAULT_GENERATOR = { filename: '[name][ext]' };
 
-export const buildFileLoaderConfig = (options = DEFAULT_OPTIONS) => {
+export const buildFileLoaderConfig = (generator = DEFAULT_GENERATOR) => {
   return {
     module: {
       rules: [
         {
           test: /\.(gif|jpe?g|png|mp3|mp4|txt)$/i,
-          use: {
-            loader: 'url-loader',
-            options,
-          },
+          type: 'asset/resource',
+          generator,
         },
       ],
     },

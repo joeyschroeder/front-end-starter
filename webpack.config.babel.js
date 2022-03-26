@@ -1,7 +1,6 @@
 import merge from 'webpack-merge';
 import path from 'path';
 import { COMPRESS_ASSETS_CONFIG } from './webpack/configs/compress-assets-config';
-import { DEVELOPMENT_OUTPUT_CONFIG } from './webpack/configs/development-output-config';
 import { DEVTOOL_CONFIG } from './webpack/configs/devtool-config';
 import { JAVASCRIPT_LOADER_CONFIG } from './webpack/configs/javascript-loader-config';
 import { OPTIMIZATION_CONFIG } from './webpack/configs/optimization-config';
@@ -62,7 +61,6 @@ const COMMON_CONFIG = merge([
 
 const DEVELOPMENT_CONFIG = merge([
   COMMON_CONFIG,
-  DEVELOPMENT_OUTPUT_CONFIG,
   DEVTOOL_CONFIG,
   buildDevServerConfig({
     baseDirectory,
@@ -82,11 +80,8 @@ const PRODUCTION_CONFIG = merge([
   STATS_CONFIG,
   buildCleanConfig(OUTPUT_PATH),
   buildFaviconConfig(faviconPath),
-  buildFontLoaderConfig({
-    limit: 2000,
-    name: '/fonts/[name].[ext]?v=[contenthash]',
-  }),
-  buildFileLoaderConfig({ limit: 500, name: '/files/[name].[ext]' }),
+  buildFontLoaderConfig({ filename: 'fonts/[name][ext]?v=[query]' }),
+  buildFileLoaderConfig({ filename: 'images/[name][ext]' }),
   buildStyleLoaderConfig(true),
 ]);
 
