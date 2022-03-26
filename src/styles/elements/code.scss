@@ -7,7 +7,7 @@ code {
   color: $color-secondary-dark;
   display: block;
   overflow: auto;
-  padding: $spacer / 8 $spacer / 2;
+  padding: calc($spacer / 8) calc($spacer / 2);
 
   p & {
     display: inline-block;

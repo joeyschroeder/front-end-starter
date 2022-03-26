@@ -4,6 +4,6 @@ label {
   color: $color-secondary;
   display: block;
   font-family: $font-family-sans-serif;
-  margin-bottom: $spacer / 2;
+  margin-bottom: calc($spacer / 2);
   text-transform: uppercase;
 }

@@ -1,8 +1,8 @@
 @import "../config/variables";
 
 p {
-  margin-bottom: $spacer / 2;
-  margin-top: $spacer / 2;
+  margin-bottom: calc($spacer / 2);
+  margin-top: calc($spacer / 2);
 
   &:first-child {
     margin-top: 0;

@@ -24,7 +24,7 @@ table {
   }
 
   td {
-    padding: $spacer / 2;
+    padding: calc($spacer / 2);
   }
 
   th {
@@ -33,7 +33,7 @@ table {
 
     color: $color-secondary;
     font-weight: $font-weight-base;
-    padding: $spacer / 2;
+    padding: calc($spacer / 2);
     text-transform: uppercase;
   }
 
@@ -49,7 +49,7 @@ table {
 
       &:nth-child(odd) {
         /* stylelint-disable-next-line alpha-value-notation */
-        background: rgba($color-primary-light, $disabled-opacity / 3);
+        background: rgba($color-primary-light, calc($disabled-opacity / 3));
       }
 
       &:hover {
