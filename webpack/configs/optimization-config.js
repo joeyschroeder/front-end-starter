@@ -1,9 +1,9 @@
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 
 export const OPTIMIZATION_CONFIG = {
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
     moduleIds: 'named',
     splitChunks: {
       cacheGroups: {
