@@ -275,7 +275,7 @@ The following are the dependencies in `package.json` separated into the categori
 #### Linting Styles
 
 - stylelint
-- stylelint-config-standard
+- stylelint-config-standard-scss
 
 #### Transpilation
 
@@ -294,11 +294,6 @@ The following are the dependencies in `package.json` separated into the categori
 - process
 - webpack-merge
 
-##### Fonts
-
-- file-loader
-- url-loader
-
 ##### JavaScript
 
 - @babel/register
@@ -309,12 +304,12 @@ The following are the dependencies in `package.json` separated into the categori
 
 - autoprefixer
 - css-loader
+- css-minimizer-webpack-plugin
 - mini-css-extract-plugin
-- node-sass
-- optimize-css-assets-webpack-plugin
 - postcss
 - postcss-loader
 - postcss-scss
+- sass
 - sass-loader
 - style-loader
 
