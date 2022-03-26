@@ -2,9 +2,9 @@
 **********************************************************/
 // base
 $color-black: #000;
-$color-blackType: #3a3a3a;
+$color-black-type: #3a3a3a;
 $color-danger: #fe5b5c;
-$color-grey: lighten($color-blackType, 30%);
+$color-grey: color.adjust($color-black-type, $lightness: 30%);
 $color-success: #a0cb4d;
 $color-warning: #fdb634;
 $color-white: #fff;
@@ -17,14 +17,14 @@ $color-twitter: #6cadde;
 
 // branding
 $color-primary: #326bab;
-$color-primary-light: lighten($color-primary, 27%);
-$color-primary-dark: darken($color-primary, 23%);
+$color-primary-light: color.adjust($color-primary, $lightness: 27%);
+$color-primary-dark: color.adjust($color-primary, $lightness: -23%);
 $color-secondary: #969899;
-$color-secondary-light: lighten($color-secondary, 27%);
-$color-secondary-dark: darken($color-secondary, 30%);
+$color-secondary-light: color.adjust($color-secondary, $lightness: 27%);
+$color-secondary-dark: color.adjust($color-secondary, $lightness: -30%);
 
 // component specific
-$color-background: lighten($color-secondary, 37%);
+$color-background: color.adjust($color-secondary, $lightness: 37%);
 $color-border: rgba($color-black, 0.1);
 $disabled-opacity: 0.4;
 
@@ -73,7 +73,7 @@ $duration-base: 0.2s;
 // easing
 $ease-default: ease;
 
-html {
-  // adjust this value to control entire app REM size
-  // font-size: 63.75%;
-}
+// html {
+//   // adjust this value to control entire app REM size
+//   font-size: 63.75%;
+// }
