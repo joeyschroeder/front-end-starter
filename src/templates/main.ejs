@@ -42,9 +42,9 @@
           if (inlinedStyles) inlinedStyles.remove(); // remove inlined styles so they don't conflict;
         }, 900);
       }
-      // Listen for the "appReady" event, which will be emitted by the app.js when component mounts
-      // and bubble up (as far as we know) to the document root.
-      document.addEventListener('appReady', handleAppReady);
+      // Listen for the "load" event, which fires when all the resources have
+      // been loaded.  
+      window.addEventListener('load', handleAppReady);
     </script>
     <div class="loader">
       <span></span>
