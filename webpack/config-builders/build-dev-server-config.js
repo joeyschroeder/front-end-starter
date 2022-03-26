@@ -9,15 +9,16 @@ export const buildDevServerConfig = ({
 } = {}) => {
   return {
     devServer: {
+      client: {
+        overlay: true,
+        progress: true,
+      },
       historyApiFallback: true,
       host,
       hot: true,
-      inline: true,
       open: false,
-      overlay: true,
       port,
       proxy,
-      stats: 'errors-only',
     },
     plugins: [
       new WatchIgnorePlugin({
