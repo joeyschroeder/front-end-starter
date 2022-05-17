@@ -1,27 +1,26 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    ["module-resolver", {
-      "alias": {
-        "components": "./src/components",
-        "constants": "./src/constants",
-        "fonts": "./src/fonts",
-        "store": "./src/store",
-        "styles": "./src/styles",
-        "util": "./src/util"
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "components": "./src/components",
+          "constants": "./src/constants",
+          "fonts": "./src/fonts",
+          "store": "./src/store",
+          "styles": "./src/styles",
+          "util": "./src/util"
+        }
       }
-    }]
+    ]
   ],
   "env": {
     "development": {
-      "plugins": [
-        "react-hot-loader/babel"
-      ]
+      "plugins": ["react-hot-loader/babel"]
     },
     "production": {
-      "plugins": [
-        "lodash"
-      ]
+      "plugins": ["lodash"]
     }
   }
 }
