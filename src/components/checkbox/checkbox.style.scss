@@ -1,0 +1,53 @@
+@use "sass:math";
+@import "../../styles/config/variables";
+@import "../../styles/mixins/transition";
+
+.root {
+  @include transition(opacity);
+
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  opacity: 1;
+
+  .icon {
+    border: $border-width solid $color-border;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: $spacer * 1.4;
+    margin-right: math.div($spacer, 2);
+    padding: math.div($spacer, 4);
+    width: $spacer * 1.4;
+
+    .fill {
+      @include transition(#{"background-color, opacity"});
+
+      background-color: $color-primary;
+      height: 100%;
+      opacity: 0;
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    .fill {
+      background-color: color.adjust($color-primary, -10%);
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.root.checked {
+  .fill {
+    opacity: 1;
+  }
+}
+
+.root.disabled {
+  opacity: $disabled-opacity;
+  pointer-events: none;
+}
