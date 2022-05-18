@@ -15,4 +15,16 @@
     margin-right: $spacer;
     width: $spacer * 2;
   }
+
+  .checkbox-container {
+    flex: 1;
+  }
+
+  .delete {
+    width: $spacer * 3;
+  }
+
+  button {
+    margin-bottom: 0;
+  }
 }

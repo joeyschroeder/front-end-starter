@@ -5,13 +5,25 @@ import { UserListItem } from './user-list-item/user-list-item';
 import styles from './user-list.style.scss';
 
 export function UsersList(props) {
-  const { users, onClearClick } = props;
+  const { users, onClearClick, onUserActiveChange, onUserDeleteClick } = props;
   const activeUsers = users.filter((user) => user.active === true);
 
   return (
     <div className={styles.root}>
       {users.map(({ id, name, active }) => {
-        return <UserListItem key={id} name={name} active={active} id={id} />;
+        const onChange = () => onUserActiveChange(id);
+        const onDeleteClick = () => onUserDeleteClick(id);
+
+        return (
+          <UserListItem
+            active={active}
+            id={id}
+            key={id}
+            name={name}
+            onChange={onChange}
+            onDeleteClick={onDeleteClick}
+          />
+        );
       })}
       <div className={styles.secondary}>
         <div className={styles.detail}>
@@ -26,11 +38,13 @@ export function UsersList(props) {
 }
 
 UsersList.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.object),
   onClearClick: PropTypes.func,
+  onUserActiveChange: PropTypes.func.isRequired,
+  onUserDeleteClick: PropTypes.func.isRequired,
+  users: PropTypes.arrayOf(PropTypes.object),
 };
 
 UsersList.defaultProps = {
-  users: [],
   onClearClick: undefined,
+  users: [],
 };
