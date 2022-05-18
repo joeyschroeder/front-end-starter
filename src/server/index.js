@@ -40,7 +40,7 @@ export const Server = () => {
       /* Creating a new user. */
       server.post('/users', (schema, request) => {
         const { requestBody } = request;
-        const { name, active } = JSON.parse(requestBody);
+        const { name, active = true } = JSON.parse(requestBody);
 
         if (!name) throw new Error('Could not save user, name is required.');
         const data = { name, active };
