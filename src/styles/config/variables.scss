@@ -67,6 +67,10 @@ $border-radius: calc($spacer / 5);
 $border-width: 1px;
 $border-width-large: calc($border-width * 6);
 
+/* shadows
+**********************************************************/
+$shadow-float: 0 calc($spacer / 8) $spacer rgba($color-black, 0.05);
+
 /* animations
 **********************************************************/
 // duration
