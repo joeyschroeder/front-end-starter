@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "../../styles/config/variables";
 @import "../../styles/mixins/transition";
 
@@ -22,5 +23,15 @@
   &:hover {
     background: $color-primary-dark;
     color: $color-white;
+  }
+}
+
+@each $color, $value in $colors {
+  .root.#{$color} {
+    background-color: $value;
+
+    &:hover {
+      background-color: color.adjust($value, $lightness: -10%);
+    }
   }
 }

@@ -14,7 +14,6 @@ $color-white: #fff;
 // social
 $color-facebook: #3b5998;
 $color-google-plus: #f44336;
-$color-pinterest: #c92228;
 $color-twitter: #6cadde;
 
 // branding
@@ -29,6 +28,22 @@ $color-secondary-dark: color.adjust($color-secondary, $lightness: -30%);
 $color-background: color.adjust($color-secondary, $lightness: 37%);
 $color-border: rgba($color-black, 0.1);
 $disabled-opacity: 0.4;
+$colors: (
+  "black": $color-black,
+  "danger": $color-danger,
+  "facebook": $color-facebook,
+  "google-plus": $color-google-plus,
+  "grey": $color-grey,
+  "primary-dark": $color-primary-dark,
+  "primary-light": $color-primary-light,
+  "primary": $color-primary,
+  "secondary-dark": $color-secondary-dark,
+  "secondary-light": $color-secondary-light,
+  "secondary": $color-secondary,
+  "success": $color-success,
+  "warning": $color-warning,
+  "white": $color-white,
+);
 
 /* typography
 **********************************************************/
