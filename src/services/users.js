@@ -53,6 +53,11 @@ export const deleteUser = async (id) => {
   });
 };
 
+/**
+ * It sends a POST request to the server, which deletes all users who haven't
+ * logged in for a while, and returns the deleted users
+ * @returns An array of users that were deleted.
+ */
 export const deleteInactiveUsers = async () => {
   const response = await fetch('/api/users/delete-inactive', {
     method: 'POST',
