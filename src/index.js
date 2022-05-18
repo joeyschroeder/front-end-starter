@@ -3,8 +3,12 @@ import React from 'react';
 import { configureStore } from 'util/configure-store/configure-store';
 import { render } from 'react-dom';
 import { Root } from './components/root/root';
+import { Server } from './server';
 
 const store = configureStore();
+
+// mock miragejs server
+Server();
 
 const init = (Component) =>
   render(

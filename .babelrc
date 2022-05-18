@@ -1,6 +1,7 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
+    "@babel/plugin-transform-runtime",
     [
       "module-resolver",
       {
@@ -8,6 +9,8 @@
           "components": "./src/components",
           "constants": "./src/constants",
           "fonts": "./src/fonts",
+          "server": "./src/server",
+          "services": "./src/services",
           "store": "./src/store",
           "styles": "./src/styles",
           "util": "./src/util"

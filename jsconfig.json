@@ -6,6 +6,8 @@
       "components/*": ["components/*"],
       "constants/*": ["constants/*"],
       "fonts/*": ["fonts/*"],
+      "server/*": ["server/*"],
+      "services/*": ["services/*"],
       "store/*": ["store/*"],
       "styles/*": ["styles/*"],
       "util/*": ["util/*"]
