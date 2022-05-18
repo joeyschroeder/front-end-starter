@@ -1,0 +1,11 @@
+@import "../../styles/config/variables";
+
+.root {
+  .primary {
+    background-color: $color-white;
+    border-radius: $border-radius;
+    border: $border-width solid $color-border;
+    box-shadow: $shadow-float;
+    padding: $spacer;
+  }
+}

@@ -6,6 +6,7 @@ import React from 'react';
 import { ReduxViewConnected } from 'components/redux-view/redux-view.connected';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Splash } from 'components/splash/splash';
+import { Users } from 'components/users/users';
 import packageJson from '../../../package.json';
 
 // The application is deployed to GitHub Pages. GitHub Pages prefixes the
@@ -23,6 +24,7 @@ export function Root(props) {
           <Route path="/" element={<Main />}>
             <Route path={ROUTES.SPLASH} element={<Splash />} />
             <Route path={ROUTES.REDUX} element={<ReduxViewConnected />} />
+            <Route path={ROUTES.USERS} element={<Users />} />
           </Route>
         </Routes>
       </BrowserRouter>

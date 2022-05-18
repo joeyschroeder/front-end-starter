@@ -28,6 +28,10 @@ exports[`<Root /> should render correctly 1`] = `
           element={<Memo(Connect(ReduxView)) />}
           path="redux"
         />
+        <Route
+          element={<Users />}
+          path="users"
+        />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -14,11 +14,11 @@ exports[`<Main /> should render correctly 1`] = `
     </AppBarButton>
     <AppBarButton
       onClick={null}
-      to="redux"
+      to="users"
     >
       <Icon
         className=""
-        name="database"
+        name="user"
       />
     </AppBarButton>
   </AppBar>

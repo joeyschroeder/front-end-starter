@@ -13,8 +13,11 @@ export function Main() {
         <AppBarButton to={ROUTES.SPLASH}>
           <Icon name="home" />
         </AppBarButton>
-        <AppBarButton to={ROUTES.REDUX}>
+        {/* <AppBarButton to={ROUTES.REDUX}>
           <Icon name="database" />
+        </AppBarButton> */}
+        <AppBarButton to={ROUTES.USERS}>
+          <Icon name="user" />
         </AppBarButton>
         {/* <AppBarButton to={ROUTES.HOT_RELOAD}>
           <Icon name="fire" />
