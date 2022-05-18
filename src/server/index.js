@@ -1,4 +1,3 @@
-// import { uniqueId } from 'lodash';
 import { Server as MirageJsServer, Model, Factory } from 'miragejs';
 
 /* Creating a list of names to use for the mock data. */

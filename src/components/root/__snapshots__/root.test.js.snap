@@ -1,39 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Root /> should render correctly 1`] = `
-<Provider
-  store={
-    Object {
-      "@@observable": [Function],
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
+<BrowserRouter
+  basename=""
 >
-  <BrowserRouter
-    basename=""
-  >
-    <Routes>
+  <Routes>
+    <Route
+      element={<Main />}
+      path="/"
+    >
       <Route
-        element={<Main />}
+        element={<Splash />}
         path="/"
-      >
-        <Route
-          element={<Splash />}
-          path="/"
-        />
-        <Route
-          element={<Memo(Connect(ReduxView)) />}
-          path="redux"
-        />
-        <Route
-          element={<Users />}
-          path="users"
-        />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-</Provider>
+      />
+      <Route
+        element={<Users />}
+        path="users"
+      />
+    </Route>
+  </Routes>
+</BrowserRouter>
 `;

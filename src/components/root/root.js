@@ -1,9 +1,6 @@
 import { Main } from 'components/main/main';
-import PropTypes from 'prop-types';
-import { Provider } from 'react-redux';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
-import { ReduxViewConnected } from 'components/redux-view/redux-view.connected';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Splash } from 'components/splash/splash';
 import { Users } from 'components/users/users';
@@ -14,28 +11,15 @@ import packageJson from '../../../package.json';
 // the basename for the router when in 'production' mode'
 const basename = process.env.BABEL_ENV === 'production' ? packageJson.name : '';
 
-export function Root(props) {
-  const { store } = props;
-
+export function Root() {
   return (
-    <Provider store={store}>
-      <BrowserRouter basename={basename}>
-        <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path={ROUTES.SPLASH} element={<Splash />} />
-            <Route path={ROUTES.REDUX} element={<ReduxViewConnected />} />
-            <Route path={ROUTES.USERS} element={<Users />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <BrowserRouter basename={basename}>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route path={ROUTES.SPLASH} element={<Splash />} />
+          <Route path={ROUTES.USERS} element={<Users />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-Root.propTypes = {
-  store: PropTypes.object,
-};
-
-Root.defaultProps = {
-  store: null,
-};

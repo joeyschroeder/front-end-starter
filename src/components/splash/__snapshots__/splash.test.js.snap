@@ -18,11 +18,7 @@ exports[`<Splash /> should render correctly 1`] = `
       <strong>
         React
       </strong>
-      , 
-      <strong>
-        Redux
-      </strong>
-      , and many other utilities for easily maintaining a front-end application.
+       and many other utilities for easily maintaining a front-end application.
     </p>
   </div>
 </div>
