@@ -1,5 +1,6 @@
 import path from 'path';
 import { WatchIgnorePlugin } from 'webpack';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 export const buildDevServerConfig = ({
   baseDirectory,
@@ -24,11 +25,7 @@ export const buildDevServerConfig = ({
       new WatchIgnorePlugin({
         paths: [path.join(baseDirectory, 'node_modules')],
       }),
+      new ReactRefreshWebpackPlugin(),
     ],
-    resolve: {
-      alias: {
-        'react-dom': '@hot-loader/react-dom',
-      },
-    },
   };
 };

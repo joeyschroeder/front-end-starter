@@ -248,7 +248,6 @@ The following are the dependencies in `package.json` separated into the categori
 
 ### Development
 
-- @hot-loader/react-dom
 - webpack
 - webpack-cli
 - webpack-dev-server
@@ -292,6 +291,7 @@ The following are the dependencies in `package.json` separated into the categori
 - compression-webpack-plugin
 - path
 - process
+- react-refresh
 - webpack-merge
 
 ##### JavaScript
@@ -330,7 +330,6 @@ The following are the dependencies in `package.json` separated into the categori
 - prop-types
 - react
 - react-dom
-- react-hot-loader
 - react-redux
 - react-router
 - react-router-dom
