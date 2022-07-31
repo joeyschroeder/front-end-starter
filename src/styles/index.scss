@@ -1,7 +1,4 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
-// fonts
-@import "fonts/index";
-
 :global {
   // config
   @import "config/reset";
@@ -23,7 +20,4 @@
   @import "elements/table";
   @import "elements/textarea";
   @import "elements/unordered-list";
-
-  // utilities
-  @import "util/animated";
 }

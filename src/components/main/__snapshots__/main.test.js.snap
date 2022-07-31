@@ -1,27 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Main /> should render correctly 1`] = `
-<App>
-  <AppBar>
-    <AppBarButton
-      onClick={null}
-      to="/"
-    >
-      <Icon
-        className=""
-        name="home"
-      />
-    </AppBarButton>
-    <AppBarButton
-      onClick={null}
-      to="redux"
-    >
-      <Icon
-        className=""
-        name="database"
-      />
-    </AppBarButton>
-  </AppBar>
-  <Outlet />
-</App>
-`;
+exports[`<Main /> should render correctly 1`] = `<Outlet />`;

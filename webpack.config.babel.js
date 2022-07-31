@@ -29,7 +29,7 @@ const entryPoint = path.join(__dirname, baseDirectory, 'src/index.js');
 const faviconPath = path.join(
   __dirname,
   baseDirectory,
-  'src/assets/images/public/favicon.png'
+  'src/assets/favicon.png'
 );
 const templatePath = path.join(
   __dirname,

@@ -24,10 +24,6 @@ exports[`<Root /> should render correctly 1`] = `
           element={<Splash />}
           path="/"
         />
-        <Route
-          element={<Memo(Connect(ReduxView)) />}
-          path="redux"
-        />
       </Route>
     </Routes>
   </BrowserRouter>

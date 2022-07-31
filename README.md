@@ -337,12 +337,6 @@ The following are the dependencies in `package.json` separated into the categori
 - redux-actions
 - redux-thunk
 
-#### Styles
-
-- animate.css
-- font-awesome
-- normalize.css
-
 <a name="dependencies-testing"></a>
 
 ### Testing
