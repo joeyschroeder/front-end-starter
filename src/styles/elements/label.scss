@@ -1,9 +1,0 @@
-@import "../config/variables";
-
-label {
-  color: $color-secondary;
-  display: block;
-  font-family: $font-family-sans-serif;
-  margin-bottom: calc($spacer / 2);
-  text-transform: uppercase;
-}

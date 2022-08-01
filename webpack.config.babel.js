@@ -9,9 +9,7 @@ import { buildCleanConfig } from './webpack/config-builders/build-clean-config';
 import { buildDevServerConfig } from './webpack/config-builders/build-dev-server-config';
 import { buildFaviconConfig } from './webpack/config-builders/build-favicon-config';
 import { buildFileLoaderConfig } from './webpack/config-builders/build-file-loader-config';
-import { buildFontLoaderConfig } from './webpack/config-builders/build-font-loader-config';
 import { buildHtmlConfig } from './webpack/config-builders/build-html-config';
-import { buildStyleLoaderConfig } from './webpack/config-builders/build-style-loader-config';
 import { POLYFILLS_CONFIG } from './webpack/configs/polyfills-config';
 
 const baseDirectory = '';
@@ -67,9 +65,7 @@ const DEVELOPMENT_CONFIG = merge([
     host: devServerHost,
     port: devServerPort,
   }),
-  buildFontLoaderConfig(),
   buildFileLoaderConfig(),
-  buildStyleLoaderConfig(),
 ]);
 
 const PRODUCTION_CONFIG = merge([
@@ -80,9 +76,7 @@ const PRODUCTION_CONFIG = merge([
   STATS_CONFIG,
   buildCleanConfig(OUTPUT_PATH),
   buildFaviconConfig(faviconPath),
-  buildFontLoaderConfig({ filename: 'fonts/[name][ext]?v=[query]' }),
   buildFileLoaderConfig({ filename: 'images/[name][ext]' }),
-  buildStyleLoaderConfig(true),
 ]);
 
 export default ({ production = false, development = false } = {}) => {

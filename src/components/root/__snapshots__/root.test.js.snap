@@ -12,6 +12,7 @@ exports[`<Root /> should render correctly 1`] = `
     }
   }
 >
+  <CssBaseline />
   <BrowserRouter
     basename=""
   >

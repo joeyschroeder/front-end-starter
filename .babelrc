@@ -7,9 +7,7 @@
         "alias": {
           "components": "./src/components",
           "constants": "./src/constants",
-          "fonts": "./src/fonts",
           "store": "./src/store",
-          "styles": "./src/styles",
           "util": "./src/util"
         }
       }
