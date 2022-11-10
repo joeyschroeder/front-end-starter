@@ -7,7 +7,6 @@ import { OPTIMIZATION_CONFIG } from './webpack/configs/optimization-config';
 import { STATS_CONFIG } from './webpack/configs/stats-config';
 import { buildCleanConfig } from './webpack/config-builders/build-clean-config';
 import { buildDevServerConfig } from './webpack/config-builders/build-dev-server-config';
-import { buildFaviconConfig } from './webpack/config-builders/build-favicon-config';
 import { buildFileLoaderConfig } from './webpack/config-builders/build-file-loader-config';
 import { buildFontLoaderConfig } from './webpack/config-builders/build-font-loader-config';
 import { buildHtmlConfig } from './webpack/config-builders/build-html-config';
@@ -53,9 +52,10 @@ const COMMON_CONFIG = merge([
   JAVASCRIPT_LOADER_CONFIG,
   POLYFILLS_CONFIG,
   buildHtmlConfig({
-    template: templatePath,
-    templateParameters: { description, siteName, url },
+    faviconPath,
+    templatePath,
     title,
+    templateParameters: { siteName, url, description },
   }),
 ]);
 
@@ -79,9 +79,8 @@ const PRODUCTION_CONFIG = merge([
   OUTPUT_CONFIG,
   STATS_CONFIG,
   buildCleanConfig(OUTPUT_PATH),
-  buildFaviconConfig(faviconPath),
-  buildFontLoaderConfig({ filename: 'fonts/[name][ext]?v=[query]' }),
-  buildFileLoaderConfig({ filename: 'images/[name][ext]' }),
+  buildFontLoaderConfig({ filename: 'fonts/[name][ext]?v=[contenthash]' }),
+  buildFileLoaderConfig({ filename: 'files/[name][ext]' }),
   buildStyleLoaderConfig(true),
 ]);
 

@@ -12,7 +12,9 @@ export const buildDevServerConfig = ({
     devServer: {
       client: {
         overlay: true,
-        progress: true,
+      },
+      devMiddleware: {
+        stats: 'errors-only',
       },
       historyApiFallback: true,
       host,
@@ -22,10 +24,12 @@ export const buildDevServerConfig = ({
       proxy,
     },
     plugins: [
+      new ReactRefreshWebpackPlugin({
+        overlay: false,
+      }),
       new WatchIgnorePlugin({
         paths: [path.join(baseDirectory, 'node_modules')],
       }),
-      new ReactRefreshWebpackPlugin(),
     ],
   };
 };

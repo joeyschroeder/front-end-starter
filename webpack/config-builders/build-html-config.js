@@ -1,9 +1,16 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export const buildHtmlConfig = ({ template, templateParameters, title }) => {
+export const buildHtmlConfig = ({
+  faviconPath,
+  templateParameters,
+  templatePath,
+  title,
+} = {}) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({
+        favicon: faviconPath,
+        filename: 'index.html',
         inject: true,
         minify: {
           collapseInlineTagWhitespace: true,
@@ -11,7 +18,7 @@ export const buildHtmlConfig = ({ template, templateParameters, title }) => {
           minifyCSS: true,
           minifyJS: true,
         },
-        template,
+        template: templatePath,
         templateParameters,
         title,
       }),
