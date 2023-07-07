@@ -85,7 +85,7 @@ npm install
 
 ### Webpack Dev Server
 
-During development, this application can be run in a web browser using [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/). To start the application in a web browser, navigate to the root of the project directory in the command line and run `npm run docs:start`. This command will print out a URL which can be opened in a web browser.
+During development, this application can be run in a web browser using [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/). To start the application in a web browser, navigate to the root of the project directory in the command line and run `npm run start`. This command will print out a URL which can be opened in a web browser.
 
 First, navigate to the root of the project:
 
@@ -96,7 +96,7 @@ cd path/to/your/working/directory/front-end-starter
 Then start the application:
 
 ```
-npm run docs:start
+npm run start
 ```
 
 After Webpack Dev Server has compiled the development bundle, it will print out something similar to following:
