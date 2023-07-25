@@ -1,11 +1,10 @@
 import React from 'react';
 import { configureStore } from 'util/configure-store/configure-store';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Root } from './components/root/root';
 
+const container = document.getElementById('app');
+const root = createRoot(container);
 const store = configureStore();
 
-const init = (Component) =>
-  render(<Component store={store} />, document.getElementById('app'));
-
-init(Root);
+root.render(<Root store={store} />);
