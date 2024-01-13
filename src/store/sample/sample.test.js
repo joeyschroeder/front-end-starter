@@ -23,7 +23,7 @@ describe('sampleReducer', () => {
       const action = resetSampleValue();
       const state = createRootReducer()(
         { sample: { sampleValue: 10 } },
-        action
+        action,
       );
       const result = selectSampleValue(state);
 

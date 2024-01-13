@@ -13,7 +13,7 @@ export function Screen(props) {
     styles.root,
     {
       [styles.centerContent]: centerContent,
-    }
+    },
   );
 
   return <div className={className}>{children}</div>;

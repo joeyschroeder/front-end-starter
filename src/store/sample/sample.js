@@ -22,7 +22,7 @@ export const sampleReducer = handleActions(
       return { ...state, sampleValue: sampleValue + 1 };
     },
   },
-  DEFAULT_STATE
+  DEFAULT_STATE,
 );
 
 // Selectors

@@ -18,5 +18,5 @@ const mapDispatchToProps = {
 
 export const ReduxViewConnected = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(ReduxView);
