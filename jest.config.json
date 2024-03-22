@@ -8,8 +8,7 @@
   "moduleNameMapper": {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   },
-  "reporters": ["jest-progress-bar-reporter"],
-  "setupFiles": ["./test-setup.js"],
+  "setupFiles": ["./jest.setup.js"],
   "testMatch": ["**/?(*.)+(test).js"],
   "transform": {
     "^.+\\.js$": "babel-jest"

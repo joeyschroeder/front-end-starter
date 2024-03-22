@@ -3,12 +3,12 @@
     "baseUrl": "./src/",
     "module": "commonjs",
     "paths": {
-      "components/*": ["components/*"],
-      "constants/*": ["constants/*"],
-      "fonts/*": ["fonts/*"],
-      "store/*": ["store/*"],
-      "styles/*": ["styles/*"],
-      "util/*": ["util/*"]
+      "components*": ["components*"],
+      "constants*": ["constants*"],
+      "fonts*": ["fonts*"],
+      "store*": ["store*"],
+      "styles*": ["styles*"],
+      "utils*": ["util*"]
     },
     "target": "es6"
   },
