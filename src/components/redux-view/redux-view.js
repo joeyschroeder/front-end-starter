@@ -15,8 +15,8 @@ export function ReduxView(props) {
         This application includes <strong>React-Redux</strong> along with a sample reducer and action set following the{' '}
         <a
           href="https://medium.com/@scbarrus/the-ducks-file-structure-for-redux-d63c41b7035c"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >
           Redux Duck Pattern
         </a>

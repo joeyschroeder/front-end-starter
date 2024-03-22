@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import styles from './screen.style.scss';
 
 export function Screen(props) {
-  const { children, centerContent, className: classNameProp } = props;
+  const { centerContent, children, className: classNameProp } = props;
   const className = classNames('animated', 'fadeIn', classNameProp, styles.root, {
     [styles.centerContent]: centerContent,
   });

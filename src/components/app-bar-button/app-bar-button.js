@@ -14,7 +14,7 @@ export function AppBarButton(props) {
     );
 
   return (
-    <button className={styles.root} type="button" onClick={onClick}>
+    <button className={styles.root} onClick={onClick} type="button">
       {children}
     </button>
   );

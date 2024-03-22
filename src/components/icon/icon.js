@@ -9,7 +9,7 @@ export function Icon(props) {
     [`fa-${name}`]: name,
   });
 
-  return <i className={className} aria-hidden="true" />;
+  return <i aria-hidden="true" className={className} />;
 }
 
 Icon.propTypes = {

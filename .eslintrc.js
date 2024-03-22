@@ -7,9 +7,9 @@ module.exports = {
   globals: {
     MyGlobal: true,
   },
-  ignorePatterns: ['**/*.gen.js', '**/*.snap', '**/coverage/**/*', '**/dist/**/*', '**/lib/**/*'],
+  ignorePatterns: ['**/*.snap', '**/coverage/**/*', '**/docs/**/*'],
   parser: '@babel/eslint-parser',
-  plugins: ['jest'],
+  plugins: ['jest', 'sort-destructure-keys'],
   rules: {
     'consistent-return': 0,
     'import/no-extraneous-dependencies': [
@@ -43,9 +43,21 @@ module.exports = {
     'react/jsx-indent-props': 0,
     'react/jsx-one-expression-per-line': [0],
     'react/jsx-props-no-spreading': 0,
+    'react/jsx-sort-props': [1],
     'react/no-unused-prop-types': 1,
-    'react/static-property-placement': [2, 'static public field'],
+    'react/sort-prop-types': [1],
+    'react/static-property-placement': [1, 'static public field'],
     semi: ['error', 'always'],
+    'sort-destructure-keys/sort-destructure-keys': 1,
+    'sort-imports': [
+      'warn',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      },
+    ],
   },
   settings: {
     'import/resolver': {

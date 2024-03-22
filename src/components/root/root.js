@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { ROUTES } from 'constants/routes';
 import React from 'react';
 import { ReduxViewConnected } from 'components/redux-view/redux-view.connected';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Splash } from 'components/splash/splash';
 import packageJson from '../../../package.json';
 
@@ -20,9 +20,9 @@ export function Root(props) {
     <Provider store={store}>
       <BrowserRouter basename={basename}>
         <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path={ROUTES.SPLASH} element={<Splash />} />
-            <Route path={ROUTES.REDUX} element={<ReduxViewConnected />} />
+          <Route element={<Main />} path="/">
+            <Route element={<Splash />} path={ROUTES.SPLASH} />
+            <Route element={<ReduxViewConnected />} path={ROUTES.REDUX} />
           </Route>
         </Routes>
       </BrowserRouter>

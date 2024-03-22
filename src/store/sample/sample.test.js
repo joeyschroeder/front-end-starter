@@ -1,4 +1,4 @@
-import { sampleDuck, INITIAL_STATE } from './sample';
+import { INITIAL_STATE, sampleDuck } from './sample';
 
 describe('sampleDuck', () => {
   it('should create a duck with the correct initial state', () => {
