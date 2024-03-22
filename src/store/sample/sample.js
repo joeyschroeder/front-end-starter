@@ -9,5 +9,5 @@ export const sampleDuck = createDuck({
 
 export const updateSampleByOne = () => (dispatch, getState) => {
   const value = sampleDuck.select.state(getState());
-  dispatch(sampleDuck.update(value + 1));
+  dispatch(sampleDuck.actions.update(value + 1));
 };
